@@ -40,7 +40,7 @@
 									{{#each features}}
 										<div>{{this}}</div>
 									{{/each}} <!-- end of features -->
-									<button class="btn {{#if @last}}  ">{{button}}</button>
+									<button class="btn {{#if @first}} btn-outline-primary {{else}} btn-primary {{/if}}">{{button}}</button>
 							    </div>
 							</div>
 						</div>
