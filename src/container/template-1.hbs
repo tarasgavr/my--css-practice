@@ -51,6 +51,23 @@
 		{{!-- основна частина --}}
 		{{!-- підвал --}}
 		<footer>
+			<div class="col-sm-10 row row-cols-1 row-cols-md-5 g-4">
+			{{#each footer}}
+				<div class="col-2">
+				<ul class="nav">
+					<li class="nav-item">                
+					{{#each this}}
+						{{#if @last}}
+						<a href="{{link}}" class="disabled text-primary nav-link">{{text}}</a>  
+						{{else}}
+						<a href="{{link}}" class="text-primary nav-link">{{text}}</a>
+						{{/if}}
+					{{/each}}
+					</li>
+				</ul>
+				</div>
+			{{/each}}
+			</div>
 		</footer>
 		{{!-- підвал --}}
 	</div>
