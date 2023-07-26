@@ -6,15 +6,41 @@
 	max-width: 960px;
 }
 header {
-	padding: 25px;
+	padding: 24px;
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 80px;
 	border-bottom: 1px solid #000;
 }
-nav.my-2 {
+.icon {
+	width: 24px;
+	height: 24px;
+	border-radius: 6px;
+	background-color: #563D7C;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	color: #fff;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+nav .my-nav {
 	display: inline-flex;
 }
-nav.my-2 a {
+.template1-nav-item a {
+	color: #343440;
+	text-decoration: none;
+}
+.template1-nav-item a:not(:last-of-type) {
 	margin-right: 24px;
+}
+.menu-nav-down {
+	display: flex;
+	flex-direction: column;
+}
+footer {
+	display: flex;
+	justify-content: space-between;
 }

@@ -1,0 +1,7 @@
+<ul class="template1-nav">
+  <li class="template1-nav-item {{#if isvertical}} menu-nav-down{{/if}}">
+    {{#each list}}
+      {{> link href=url text=text noLine=true }}
+    {{/each}} <!-- end of list -->
+  </li>
+</ul>
