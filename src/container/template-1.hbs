@@ -1,9 +1,9 @@
 {{!-- сторінка --}}
 <div class="page">
-  <div class="page-content">
+   <div class="page-content">
 		{{!-- шапка --}}
-		<header>
-			{{> icon }}
+		<header class="template1-header">
+			{{> icon letter='B' }}
 			<nav class="my-nav">
 				{{> template1-nav list=header }}
 			</nav>
@@ -11,9 +11,9 @@
 		{{!-- шапка --}}
 		{{!-- основна частина --}}
 		<main>
-			<div class="hero">
-				<h2>{{hero.title}}</h2>
-				<p>{{hero.text}}</p>
+			<div class="hero-block">
+				<h2 class='hero-title'>{{hero.title}}</h2>
+				<p class='hero-text'>{{hero.text}}</p>
 			</div>
 			<div class="plans">
 				<div class="row row-cols-1 row-cols-md-3 g-4">
@@ -36,9 +36,25 @@
 		</main>
 		{{!-- основна частина --}}
 		{{!-- підвал --}}
-		<footer>
-			{{> icon }}
-			{{> template1-nav list=footer.0.links isvertical=true }}
+		<footer class="template1-footer">
+			<div class="b-copyright">
+				{{> icon letter='B' }}
+				<div class="template1-footerText">
+					Copyright 2023
+				</div>
+			</div>
+			<div class="template1-footerLinks">
+				<div class="template1-footerHeaders">
+					{{#each footer}}
+					    <div class="template1-footerHeader">
+							{{title}}
+						</div>
+					{{/each}} <!-- end of footer -->
+				</div>
+				<div class="template1-footerVerticalLinks">
+					{{> template1-nav list=footer.0.links isvertical=true }}
+				</div>
+			</div>
 		</footer>
 		{{!-- підвал --}}
 	</div>
