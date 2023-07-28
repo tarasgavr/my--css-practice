@@ -15,23 +15,25 @@
 				<h2 class='hero-title'>{{hero.title}}</h2>
 				<p class='hero-text'>{{hero.text}}</p>
 			</div>
-			<div class="plans">
-				<div class="row row-cols-1 row-cols-md-3 g-4">
+			<div class="plans-block">
+				{{!-- <div class="row row-cols-1 row-cols-md-3 g-4"> --}}
 					{{#each plans}}
-						<div class="col">
-							<div class='card'>
-								<div class="card-header">{{name}}</div>
-								<div class='card-body'>
+						{{!-- <div class="col"> --}}
+							<div class='plans-card'>
+								<div class="plans-card-header">
+									<div>{{name}}</div>
+								</div>
+								<div class='plans-card-body'>
 									<div>{{price}}</div>
-									{{#each features}}
-										<div>{{this}}</div>
-									{{/each}} <!-- end of features -->
+									<ul>									
+										{{#each features}}
+											<li>{{this}}</li>
+										{{/each}} <!-- end of features -->
+									</ul>
 									<button class="btn {{#if @first}} btn-outline-primary {{else}} btn-primary {{/if}}">{{button}}</button>
 							    </div>
 							</div>
-						</div>
 					{{/each}} <!-- end of plans -->
-				</div>
 			</div>
 		</main>
 		{{!-- основна частина --}}

@@ -61,6 +61,50 @@ nav.template1-nav {
 	line-height: 150%;
 	margin: 0;
 }
+.plans-block {
+	display: flex;
+	flex-direction: row;
+}
+.plans-card {
+	display: flex;
+	flex-direction: column;
+	width: calc(100%/3);
+	border: 1px solid #000;
+}
+.plans-card:not(:last-of-type) {
+	margin-right: 24px;
+}
+.plans-card-header {
+	background-color: rgba(111, 77, 77, 0.03);
+	padding: 12px 24px;
+	border-bottom: 1px solid #000;
+}
+.plans-card-header div {
+	color: #212529;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+.plans-card-body {
+	padding: 24px;
+}
+.plans-card-body div {
+	padding: 24px;
+}
+.plans-card-body {
+	padding: 24px;
+}
+.plans-card-body {
+	padding: 24px;
+}
+.plans-card-body {
+	padding: 24px;
+}
+.plans-card-body {
+	padding: 24px;
+}
+
 /* {{!-- основна частина --}} */
 /* {{!-- підвал --}} */
 .template1-footer {
