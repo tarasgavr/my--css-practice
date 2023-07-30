@@ -24,7 +24,11 @@
 									<div>{{name}}</div>
 								</div>
 								<div class='plans-card-body'>
-									<div>{{price}}</div>
+									<div>
+										<span>${{price}}</span>
+										<span>/</span>
+										<span>mo</span>
+									</div>
 									<ul>									
 										{{#each features}}
 											<li>{{this}}</li>
