@@ -47,18 +47,16 @@
 					Copyright 2023
 				</div>
 			</div>
-			<div class="template1-footerLinks">
-				<div class="template1-footerHeaders">
-					{{#each footer}}
-					    <div class="template1-footerHeader">
-							{{title}}
-						</div>
-					{{/each}} <!-- end of footer -->
+			{{#each footer}}
+			<div class="template1-footerHeaders">
+				<div class="template1-footerHeader">
+					{{title}}
 				</div>
-				<div class="template1-footerVerticalLinks">
-					{{> template1-nav list=footer.0.links isvertical=true }}
+				<div class="template1-footerLinksText">
+					{{> template1-nav list=links isvertical=true }}
 				</div>
 			</div>
+			{{/each}} <!-- end of footer -->
 		</footer>
 		{{!-- підвал --}}
 	</div>

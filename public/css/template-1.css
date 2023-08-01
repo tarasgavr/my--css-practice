@@ -102,6 +102,7 @@ nav.template1-nav {
 	align-items: flex-start;
 	align-self: stretch;
 	gap: 24px;
+	padding: 24px;
 }
 .plans-card-body div {
 	display: flex;
@@ -127,11 +128,6 @@ nav.template1-nav {
 	align-items: center;
 	align-self: stretch;
 	gap: 12px;
-	padding: 0 55px;
-}
-.plans-card-body:last-child
- ul {
-	padding: 0 35px;
 }
 .plans-card-body button {
 	width: 100%;
@@ -141,6 +137,34 @@ nav.template1-nav {
 .template1-footer {
 	display: flex;
 	justify-content: space-between;
+	padding-top: 12px;
+}
+.b-copyright {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.template1-footerText {
+	color: #6C757D;
+	font-size: 12.8px;
+}
+.template1-footerLinks {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.template1-footerHeaders {
+	display: block;
+}
+.template1-footerHeader {
+	color: #212529;
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 12px;
+}
+.template1-footerLinksText {
+	color: #6C757D;
+	font-size: 15px;
 }
 .template1-menu-down {
 	display: flex;
