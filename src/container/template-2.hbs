@@ -1,0 +1,63 @@
+{{!-- сторінка --}}
+<div class="page">
+   <div class="page-content">
+		{{!-- шапка --}}
+		<header class="template1-header">
+			{{> icon letter='B' }}
+			<nav class="my-nav">
+				{{> template1-nav list=header }}
+			</nav>
+		</header>
+		{{!-- шапка --}}
+		{{!-- основна частина --}}
+		<main>
+			<div class="hero-block">
+				<h2 class='hero-title'>{{hero.title}}</h2>
+				<p class='hero-text'>{{hero.text}}</p>
+			</div>
+			<div class="plans-block">
+					{{#each plans}}
+							<div class='plans-card'>
+								<div class="plans-card-header">
+									<div>{{name}}</div>
+								</div>
+								<div class='plans-card-body'>
+									<div>
+										<span>${{price}}</span>
+										<span>/</span>
+										<span>mo</span>
+									</div>
+									<ul>									
+										{{#each features}}
+											<li>{{this}}</li>
+										{{/each}} <!-- end of features -->
+									</ul>
+									<button class="btn {{#if @first}} btn-outline-primary {{else}} btn-primary {{/if}}">{{button}}</button>
+							    </div>
+							</div>
+					{{/each}} <!-- end of plans -->
+			</div>
+		</main>
+		{{!-- основна частина --}}
+		{{!-- підвал --}}
+		<footer class="template1-footer">
+			<div class="b-copyright">
+				{{> icon letter='B' }}
+				<div class="template1-footerText">
+					Copyright 2023
+				</div>
+			</div>
+			{{#each footer}}
+			<div class="template1-footerHeaders">
+				<div class="template1-footerHeader">
+					{{title}}
+				</div>
+				<div class="template1-footerLinksText">
+					{{> template1-nav list=links isvertical=true }}
+				</div>
+			</div>
+			{{/each}} <!-- end of footer -->
+		</footer>
+		{{!-- підвал --}}
+	</div>
+</div>
