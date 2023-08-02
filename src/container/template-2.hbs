@@ -12,30 +12,25 @@
 		{{!-- основна частина --}}
 		<main>
 			<div class="hero-block">
-				<h2 class='hero-title'>{{hero.title}}</h2>
-				<p class='hero-text'>{{hero.text}}</p>
+				{{#with hero}}
+					<h2 class='hero-title'>{{title}}</h2>
+					<p class='hero-text'>{{text}}</p>
+					<a href="{{button.url}}" class="hero-button">{{button.text}}</a>				  
+				{{/with}} <!-- end of hero -->
 			</div>
-			<div class="plans-block">
-					{{#each plans}}
-							<div class='plans-card'>
-								<div class="plans-card-header">
-									<div>{{name}}</div>
-								</div>
-								<div class='plans-card-body'>
-									<div>
-										<span>${{price}}</span>
-										<span>/</span>
-										<span>mo</span>
-									</div>
-									<ul>									
-										{{#each features}}
-											<li>{{this}}</li>
-										{{/each}} <!-- end of features -->
-									</ul>
-									<button class="btn {{#if @first}} btn-outline-primary {{else}} btn-primary {{/if}}">{{button}}</button>
+			<div class="preview-block">
+					{{#each preview}}
+							<div class='preview-card'>
+								<div class='preview-card-body'>
+									<span class="preview-date">{{date}}</span>
+									{{#each category}}
+										<span class="preview-category">{{text}}</span>
+									{{/each}} <!-- end of category -->
+									<strong>{{title}}</strong>
+									<p>{{text}}</p>
 							    </div>
 							</div>
-					{{/each}} <!-- end of plans -->
+					{{/each}} <!-- end of preview -->
 			</div>
 		</main>
 		{{!-- основна частина --}}

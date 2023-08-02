@@ -44,22 +44,33 @@ nav.template1-nav {
 .hero-block {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
+	gap: 24px;
+	padding: 80px;
+	background-color: #343440;
+	border-radius: 24px;
 	margin-bottom: 80px;
 }
 .hero-title {
-	color: #212529;
+	color: #fff;
 	font-weight: 500;
 	font-size: 56px;
-	margin-bottom: 12px;
 }
 .hero-text {
-	color: #343440;
-	width: 585px;
-	text-align: center;
+	color: #fff;
 	font-size: 20px;
 	line-height: 150%;
 	margin: 0;
+}
+.hero-button {
+	padding: 9px 76px;
+	background-color: #007BFF;
+	border: 1px solid #007BFF;
+	border-radius: 4px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+	line-height: 150%;
 }
 .plans-block {
 	display: flex;

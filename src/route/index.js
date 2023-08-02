@@ -23,7 +23,7 @@ router.get('/template-1', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('template-1', {
-    layout: "template",
+    layout: "template-1",
     page: {
       title: 'Example Page',
     },
@@ -152,7 +152,7 @@ router.get('/template-2', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('template-2', {
-    layout: 'template',
+    layout: 'template-2',
     page: {
       title: "Example Page"
     },
