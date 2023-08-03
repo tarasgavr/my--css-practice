@@ -4,7 +4,7 @@
 	font-weight: 400;
 	font-size: 16px;
 }
-.page-content {
+.page-content-2 {
 	margin: 0 auto;
 	max-width: 960px;
 }
@@ -41,7 +41,7 @@ nav.template1-nav {
 }
 /* {{!-- шапка --}} */
 /* {{!-- основна частина --}} */
-.hero-block {
+.hero-block-2 {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -51,12 +51,12 @@ nav.template1-nav {
 	border-radius: 24px;
 	margin-bottom: 80px;
 }
-.hero-title {
+.hero-title-2 {
 	color: #fff;
 	font-weight: 500;
 	font-size: 56px;
 }
-.hero-text {
+.hero-text-2 {
 	color: #fff;
 	font-size: 20px;
 	line-height: 150%;
@@ -72,76 +72,56 @@ nav.template1-nav {
 	font-size: 20px;
 	line-height: 150%;
 }
-.plans-block {
+.preview-block {
 	display: flex;
 	align-items: flex-start;
 	align-self: stretch;
 	gap: 24px;
 	margin-bottom: 80px;
 }
-.plans-card {
+.preview-card {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	align-self: stretch;
 	justify-self: stretch;
 	flex: 1 0 0;
-	padding: 1px 1px 0 1px;
-	border-radius: 4px;
-	border: 1px solid rgba(0, 0, 0, .13);
-	background-color: #fff;
+	width: 440px;
+	border-radius: 24px;
+	border: 1px solid #DEE2E6;
+	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05);
 }
-.plans-card-header {
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	align-self: stretch;
-	padding: 12px 24px;
-	border-bottom: 1px solid rgba(0, 0, 0, .13);
-	border-right: 3px 3px 0 0;
-	background-color: rgba(0, 0, 0, 0.03);
-}
-.plans-card-header div {
-	color: #212529;
-	font-size: 24px;
-	font-weight: 400;
-	line-height: 1.2;
-}
-.plans-card-body {
+.preview-card-body {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	align-self: stretch;
-	gap: 24px;
-	padding: 24px;
-}
-.plans-card-body div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-self: stretch;
-	gap: 6px;
-	padding: 0 69px;
-}
-.plans-card-body div span:first-child {
-	color: #212529;
-	font-size: 40px;
-	font-weight: 500;
-}
-.plans-card-body div span:not(:first-child) {
-	color: #6C757D;
-	font-size: 29px;
-	font-weight: 400;
-}
-.plans-card-body ul {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	align-self: stretch;
 	gap: 12px;
+	padding: 24px;
 }
-.plans-card-body button {
-	width: 100%;
+.preview-card-body div:first-child {
+	display: flex;
+	gap: 12px;
+}
+.preview-card-body div span:first-child {
+	color: #6C757D;
+	line-height: 1.5;
+}
+.preview-card-body strong {
+	color: #343440;
+	font-size: 28px;
+	font-weight: 500;
+	line-height: 120%;
+}
+.preview-card-body p {
+	color: #212529;
+	font-size: 15px;
+	line-height: 160%;
+}
+.preview-card-body div:last-child {
+	color: #212529;
+	font-size: 15px;
+	line-height: 160%;
 }
 /* {{!-- основна частина --}} */
 /* {{!-- підвал --}} */

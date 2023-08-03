@@ -1,6 +1,6 @@
 {{!-- сторінка --}}
 <div class="page">
-   <div class="page-content">
+   <div class="page-content-2">
 		{{!-- шапка --}}
 		<header class="template1-header">
 			{{> icon letter='B' }}
@@ -11,25 +11,28 @@
 		{{!-- шапка --}}
 		{{!-- основна частина --}}
 		<main>
-			<div class="hero-block">
+			<div class="hero-block-2">
 				{{#with hero}}
-					<h2 class='hero-title'>{{title}}</h2>
-					<p class='hero-text'>{{text}}</p>
+					<h2 class='hero-title-2'>{{title}}</h2>
+					<p class='hero-text-2'>{{text}}</p>
 					<a href="{{button.url}}" class="hero-button">{{button.text}}</a>				  
 				{{/with}} <!-- end of hero -->
 			</div>
 			<div class="preview-block">
 					{{#each preview}}
-							<div class='preview-card'>
-								<div class='preview-card-body'>
-									<span class="preview-date">{{date}}</span>
+						<div class='preview-card'>
+							<div class='preview-card-body'>
+								<div>
+									<span>{{date}}</span>
 									{{#each category}}
 										<span class="preview-category">{{text}}</span>
 									{{/each}} <!-- end of category -->
-									<strong>{{title}}</strong>
-									<p>{{text}}</p>
-							    </div>
-							</div>
+								</div>
+								<strong>{{title}}</strong>
+								<p>{{text}}</p>
+								<a href="#">Continue reading</a>
+              		    	</div>
+						</div>
 					{{/each}} <!-- end of preview -->
 			</div>
 		</main>
