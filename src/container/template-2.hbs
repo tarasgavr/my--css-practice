@@ -21,17 +21,15 @@
 			<div class="preview-block">
 					{{#each preview}}
 						<div class='preview-card'>
-							<div class='preview-card-body'>
-								<div>
-									<span>{{date}}</span>
-									{{#each category}}
-										<span class="preview-category">{{text}}</span>
-									{{/each}} <!-- end of category -->
-								</div>
-								<strong>{{title}}</strong>
-								<p>{{text}}</p>
-								<a href="#">Continue reading</a>
-              		    	</div>
+							<div>
+								<span>{{date}}</span>
+								{{#each category}}
+									<span class="preview-category-{{id}}">{{text}}</span>
+								{{/each}} <!-- end of category -->
+							</div>
+							<strong>{{title}}</strong>
+							<p>{{text}}</p>
+							<a href="#">Continue reading</a>
 						</div>
 					{{/each}} <!-- end of preview -->
 			</div>
