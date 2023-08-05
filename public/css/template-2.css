@@ -6,7 +6,7 @@
 }
 .page-content-2 {
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: 1000px;
 }
 /* {{!-- шапка --}} */
 .template1-header {
@@ -77,7 +77,7 @@ nav.template1-nav {
 }
 .preview-card {
 	display: inline-block;
-	width: 440px;
+	width: 486px;
 	padding: 24px;
 	border-radius: 24px;
 	border: 1px solid #DEE2E6;
@@ -124,9 +124,39 @@ nav.template1-nav {
 }
 .preview-card p {
 	color: #212529;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 160%;
 }
+.news-list {
+	margin-bottom: 80px;
+}
+.news-list-header {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #000;
+}
+.news-list-header {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #000;
+}
+.news-list-badge {
+}
+.news-list-block {
+}
+.news-blogs {
+}
+.news-blog {
+}
+.news-blog-title {
+}
+.news-blog-info {
+}
+.news-blog-description {
+}
+
 /* {{!-- основна частина --}} */
 /* {{!-- підвал --}} */
 .template1-footer {

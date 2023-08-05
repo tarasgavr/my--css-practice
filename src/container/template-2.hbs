@@ -33,6 +33,33 @@
 						</div>
 					{{/each}} <!-- end of preview -->
 			</div>
+			<div class="news-list">
+				<div class="news-list-header">
+					<h3>List of posts</h3>
+					<div>
+						{{#each categories}}
+							<div class="news-list-badge">
+								{{text}}
+							</div>
+						{{/each}} <!-- end of categories -->
+					</div>
+				</div>
+				<div class="news-list-block">
+					<div class="news-blogs">
+						{{#each news}}
+							<article class="news-blog">
+								<h3 class="news-blog-title">{{title}}</h3>
+								<div class="news-blog-info">
+									<span>{{date}}</span>
+									<span>{{author}}</span>
+								</div>
+								<p class="news-blog-description">{{description}}</p>
+							</article>
+						{{/each}} <!-- end of news -->
+					</div>
+					<aside></aside>
+				</div>
+			</div>
 		</main>
 		{{!-- основна частина --}}
 		{{!-- підвал --}}
