@@ -159,9 +159,11 @@ nav.template1-nav {
 	cursor: pointer;
 }
 .news-list-block {
+	margin-bottom: 80px;
 }
 .news-blogs {
 	float: left;
+	width: 620px;
 	margin-right: 80px;
 }
 .news-blog {
@@ -171,24 +173,63 @@ nav.template1-nav {
 	margin-bottom: 40px;
 }
 .news-blog-title {
+	font-size: 27px;
+	color: #212529;
+	font-weight: 500;
+	margin-bottom: 12px;
 }
 .news-blog-info {
+	line-height: 1.5;
+	margin-bottom: 12px;
+}
+.news-blog-info time {
+	color: #999;
+}
+.news-blog-info strong {
+	color: #0050FF;
 }
 .news-blog-description {
+	color: #212529;
+	line-height: 1.5;
+	margin-bottom: 12px;
+}
+.news-blog a {
+	display: block;
+	margin-bottom: 12px;
 }
 .news-list-details {
+	width: 300px;
 	float: right;
+	color: #212529;
 }
 .news-list-about {
+	background-color: #F8F9FA;
+	padding: 24px;
+	margin-bottom: 24px;
 }
-.news-list-archive {
+.news-list-about h4 {
+	font-size: 20px;
+	margin-bottom: 12px;
 }
-.news-list-social {
+.news-list-about p {
+	font-size: 14px;
 }
-
+.news-list-archive,.news-list-social {
+	padding: 14px 16px;
+	margin-bottom: 24px;
+}
+.news-list-archive h4,.news-list-social h4 {
+	font-size: 24px;
+	font-weight: 500;
+	margin-bottom: 12px;
+}
+.news-list-archive ul li,.news-list-social ul li {
+	margin-bottom: 12px;
+}
 /* {{!-- основна частина --}} */
 /* {{!-- підвал --}} */
 .template1-footer {
+	margin-top: 80px;
 	clear: both;
 	display: flex;
 	justify-content: space-between;

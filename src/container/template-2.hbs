@@ -38,9 +38,9 @@
 					<h3>List of posts</h3>
 					<div>
 						{{#each categories}}
-							<a href="#" class="news-list-badge">
+							<div class="news-list-badge">
 								{{text}}
-							</a>
+							</div>
 						{{/each}} <!-- end of categories -->
 					</div>
 				</div>
@@ -52,7 +52,7 @@
 								<div class="news-blog-info">
 									<time datetime="{{date}}">{{date}}</time>
 									by
-									<mark>{{author}}</mark>
+									<strong>{{author}}</strong>
 								</div>
 								<p class="news-blog-description">{{description}}</p>
 								<a href="#">Continue reading</a>
@@ -65,7 +65,7 @@
 							<p>{{about}}</p>
 						</article>
 						<article class="news-list-archive">
-							<h4>Archive</h4>
+							<h4>Archives</h4>
 							<ul>
 								{{#each archive}}
 									<li><a href="{{url}}">{{text}}</a></li>
