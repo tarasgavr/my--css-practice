@@ -159,10 +159,9 @@ nav.template1-nav {
 	cursor: pointer;
 }
 .news-list-block {
-	margin-bottom: 80px;
+	position: relative;
 }
 .news-blogs {
-	float: left;
 	width: 620px;
 	margin-right: 80px;
 }
@@ -201,6 +200,9 @@ nav.template1-nav {
 	width: 300px;
 	float: right;
 	color: #212529;
+	position: absolute;
+	left: 700px;
+	top: 0px;
 }
 .news-list-about {
 	background-color: #F8F9FA;
@@ -229,8 +231,6 @@ nav.template1-nav {
 /* {{!-- основна частина --}} */
 /* {{!-- підвал --}} */
 .template1-footer {
-	margin-top: 80px;
-	clear: both;
 	display: flex;
 	justify-content: space-between;
 	padding-top: 12px;
