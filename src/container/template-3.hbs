@@ -1,0 +1,109 @@
+{{!-- сторінка --}}
+<div class="page">
+   <div class="page-content-2">
+		{{!-- шапка --}}
+		<header class="template1-header">
+			{{> icon letter='B' }}
+			<nav class="my-nav">
+				{{> template1-nav list=header }}
+			</nav>
+		</header>
+		{{!-- шапка --}}
+		{{!-- основна частина --}}
+		<main>
+			<div class="hero-block-2">
+				{{#with hero}}
+					<h2 class='hero-title-2'>{{title}}</h2>
+					<p class='hero-text-2'>{{text}}</p>
+					<a href="{{button.url}}" class="hero-button">{{button.text}}</a>				  
+				{{/with}} <!-- end of hero -->
+			</div>
+			<div class="preview-block">
+					{{#each preview}}
+						<div class='preview-card'>
+							<div>
+								<span>{{date}}</span>
+								{{#each category}}
+									<span class="preview-category-{{id}}">{{text}}</span>
+								{{/each}} <!-- end of category -->
+							</div>
+							<strong>{{title}}</strong>
+							<p>{{text}}</p>
+							<a href="#">Continue reading</a>
+						</div>
+					{{/each}} <!-- end of preview -->
+			</div>
+			<div class="news-list">
+				<div class="news-list-header">
+					<h3>List of posts</h3>
+					<div>
+						{{#each categories}}
+							<div class="news-list-badge">
+								{{text}}
+							</div>
+						{{/each}} <!-- end of categories -->
+					</div>
+				</div>
+				<div class="news-list-block">
+					<div class="news-blogs">
+						{{#each news}}
+							<article class="news-blog">
+								<h3 class="news-blog-title">{{title}}</h3>
+								<div class="news-blog-info">
+									<time datetime="{{date}}">{{date}}</time>
+									by
+									<strong>{{author}}</strong>
+								</div>
+								<p class="news-blog-description">{{description}}</p>
+								<a href="#">Continue reading</a>
+							</article>
+						{{/each}} <!-- end of news -->
+					</div>
+					<aside class="news-list-details">
+						<article class="news-list-about">
+							<h4>About</h4>
+							<p>{{about}}</p>
+						</article>
+						<article class="news-list-archive">
+							<h4>Archives</h4>
+							<ul>
+								{{#each archive}}
+									<li><a href="{{url}}">{{text}}</a></li>
+								{{/each}} <!-- end of archive -->
+							</ul>
+						</article>
+						<article class="news-list-social">
+							<h4>Social</h4>
+							<ul>
+								{{#each social}}
+									<li><a href="{{url}}">{{text}}</a></li>
+								{{/each}} <!-- end of archive -->
+							</ul>
+						</article>
+					</aside>
+				</div>
+			</div>
+		</main>
+		{{!-- основна частина --}}
+		{{!-- підвал --}}
+		<footer class="template1-footer">
+			<div class="b-copyright">
+				{{> icon letter='B' }}
+				<div class="template1-footerText">
+					Copyright 2023
+				</div>
+			</div>
+			{{#each footer}}
+			<div class="template1-footerHeaders">
+				<div class="template1-footerHeader">
+					{{title}}
+				</div>
+				<div class="template1-footerLinksText">
+					{{> template1-nav list=links isvertical=true }}
+				</div>
+			</div>
+			{{/each}} <!-- end of footer -->
+		</footer>
+		{{!-- підвал --}}
+	</div>
+</div>
