@@ -27,12 +27,15 @@
         </div>
       {{/each}} <!-- end of preview -->
   </div>
+  <div class="featurette-divider"></div>
   <div class="form-container">
-    <div>
-      <h3 class="form-title">{{title}}</h3>
-      <p class="form-info">{{info}}</p>
-    </div>
-    <a href="{{href}}" class="form-link">{{button}}</a>
+    {{#with form}}
+      <div>
+        <h3 class="form-title">{{title}}</h3>
+        <p class="form-info">{{info}}</p>
+      </div>
+      <a href="{{href}}" class="form-link">{{button}}</a>
+    {{/with}} <!-- end of form -->
   </div>
 </main>
 {{!-- основна частина --}}
