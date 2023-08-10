@@ -1,0 +1,205 @@
+:root {
+	--color-white: #fff;
+	--color-black: #000;
+	--color-gray: #5a5a5a;
+	--color-grayb: #6c757d;
+	--color-form: #563d7c;
+
+	--size-md: 32px;
+	--size-d: 16px;
+
+	--space-xl: 80px;
+	--space-l: 40px;
+	--space-s: 36px;
+	--space-m: 24px;
+	--space-xm: 12px;
+}
+.page-3 {
+	display: flex;
+	justify-content: center;
+	background-color: var(--color-white);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: var(--size-d);
+}
+.page-content-3 {
+	display: flex;
+	flex-direction: column;
+	max-width: 1000px;
+	width: 100%;
+	gap: var(--space-xl);
+}
+/* {{!-- шапка --}} */
+.template1-header {
+	padding: var(--space-m);
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid var(--color-black);
+}
+.icon {
+	width: 24px;
+	height: 24px;
+	border-radius: 6px;
+	background-color: #563D7C;
+	text-align: center;
+	font-weight: 600;
+	color: var(--color-white);
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+nav.template1-nav {
+	display: inline-flex;
+}
+.template1-nav-item a {
+	color: #343440;
+	text-decoration: none;
+}
+.template1-nav-item a:not(:last-of-type) {
+	margin-right: var(--space-m);
+}
+/* {{!-- шапка --}} */
+/* {{!-- основна частина --}} */
+main {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xl);
+}
+.hero-block-3 {
+	display: flex;
+	gap: var(--space-s);
+	padding: var(--space-l);
+	border-bottom: 1px solid var(--color-gray);
+}
+.hero-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: var(--space-m);
+}
+.hero-title-3 {
+	color: var(--color-gray);
+	font-size: 50px;
+	font-weight: 500;
+	line-height: 120%;
+	letter-spacing: -0.8px;
+}
+.hero-text-3 {
+	color: var(--color-gray);
+	font-size: 20px;
+	line-height: 170%;
+}
+.hero-image {
+	width: 500px;
+	height: 500px;
+	border-radius: 4px;
+}
+.blog-block {
+	display: flex;
+}
+.blog-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--space-xm);
+	padding: 0 var(--space-m);
+}
+.blog-card-image {
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+}
+.blog-card-title {
+	color: var(--color-gray);
+	text-align: center;
+	font-size: var(--size-md);
+	line-height: 100%;
+}
+.blog-card-text {
+	color: var(--color-gray);
+	text-align: center;
+	line-height: 150%;
+}
+.blog-card-link {
+	display: block;
+	padding: var(--space-xm) 16px;
+	border: 1px solid var(--color-grayb);
+	background-color: var(--color-grayb);
+	color: var(--color-white);
+	text-align: center;
+}
+.featurette-divider {
+	border: 1px solid var(--color-gray);
+}
+.form-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--space-m);
+	border-radius: 8px;
+	background-color: var(--color-form);
+	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05);
+}
+.form-container div {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xm);
+	line-height: 100%;
+}
+.form-title {
+	color: var(--color-white);
+	font-size: 27px;
+}
+.form-info {
+	color: rgba(255, 255, 255, .5);
+}
+.form-link {
+	display: block;
+	padding: 12px 159px;
+	border-radius: 6px;
+	background-color: var(--color-white);
+	color: var(--color-black);
+	text-decoration: none;
+	text-align: center;
+	font-size: 18px;
+}
+/* {{!-- основна частина --}} */
+/* {{!-- підвал --}} */
+.template1-footer {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 12px;
+}
+.b-copyright {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.template1-footerText {
+	color: #6C757D;
+	font-size: 12.8px;
+}
+.template1-footerLinks {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.template1-footerHeaders {
+	display: block;
+}
+.template1-footerHeader {
+	color: #212529;
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 12px;
+}
+.template1-footerLinksText {
+	color: #6C757D;
+	font-size: 15px;
+}
+.template1-menu-down {
+	display: flex;
+	flex-direction: column;
+}
+/* {{!-- підвал --}} */
