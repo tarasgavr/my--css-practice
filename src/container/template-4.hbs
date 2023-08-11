@@ -19,6 +19,7 @@
     {{/with}} <!-- end of main -->
   </div>
   <div class="featured-block">
+    <div class="featured-cards">      
       {{#each featured}}
         <div class='featured-card'>
           <img src="{{photo}}" alt="featured card image" class="featured-card-image">
@@ -27,8 +28,17 @@
           <a href="{{linkUrl}}" class="featured-card-link">{{linkText}}</a>
         </div>
       {{/each}} <!-- end of featured -->
+    </div>
+    <div class="featurette-divider"></div>
   </div>
-  
+  <div class="actions-block">
+    {{#each actions}}
+      <div class="action-card">
+        <h4 class="action-card-title">{{heading}}</h4>
+        <a href="{{url}}" class="action-card-link">{{text}}</a>
+      </div>
+    {{/each}} <!-- end of actions -->
+  </div>
 </main>
 {{!-- основна частина --}}
 {{!-- підвал --}}
