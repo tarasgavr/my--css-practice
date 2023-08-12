@@ -163,16 +163,12 @@ main {
 .action-card-link {
   display: flex;
   justify-content: center;
-  padding: 16px 159px;
+  padding: 16px;
   background-color: var(--color-white);
   border-radius: 6px;
   color: var(--color-text);
-  text-align: center;
   text-decoration: none;
   font-size: 20px;
-}
-.action-card-link:last-of-type                 {
-  font-size: 14px;
 }
 /* {{!-- основна частина --}} */
 /* {{!-- підвал --}} */
