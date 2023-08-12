@@ -1,0 +1,63 @@
+{{!-- шапка --}}
+<header class="template1-header">
+  {{> icon letter='B' }}
+  <nav class="my-nav">
+    {{> template1-nav list=header }}
+  </nav>
+</header>
+{{!-- шапка --}}
+{{!-- основна частина --}}
+<main>
+  <div class="main-block">
+    {{#with main}}
+      <img src="{{image}}" alt="main image" class="main-image">
+      <div class="main-container">
+        <h2 class='main-title'>{{heading}}</h2>
+        <p class='main-text'>{{descriotion}}</p>
+        <a href="{{href}}" class="main-button">{{button}}</a>
+      </div>
+    {{/with}} <!-- end of main -->
+  </div>
+  <div class="featured-block">
+    <div class="featured-cards">      
+      {{#each featured}}
+        <div class='featured-card'>
+          <img src="{{photo}}" alt="featured card image" class="featured-card-image">
+          <h2 class='featured-card-title'>{{heading}}</h2>
+          <p class='featured-card-text'>{{info}}</p>
+          <a href="{{linkUrl}}" class="featured-card-link">{{linkText}}</a>
+        </div>
+      {{/each}} <!-- end of featured -->
+    </div>
+    <div class="featurette-divider"></div>
+  </div>
+  <div class="actions-block">
+    {{#each actions}}
+      <div class="action-card">
+        <h4 class="action-card-title">{{heading}}</h4>
+        <a href="{{url}}" class="action-card-link">{{text}}</a>
+      </div>
+    {{/each}} <!-- end of actions -->
+  </div>
+</main>
+{{!-- основна частина --}}
+{{!-- підвал --}}
+<footer class="template1-footer">
+  <div class="b-copyright">
+    {{> icon letter='B' }}
+    <div class="template1-footerText">
+      Copyright 2023
+    </div>
+  </div>
+  {{#each footer}}
+  <div class="template1-footerHeaders">
+    <div class="template1-footerHeader">
+      {{title}}
+    </div>
+    <div class="template1-footerLinksText">
+      {{> template1-nav list=links isvertical=true }}
+    </div>
+  </div>
+  {{/each}} <!-- end of footer -->
+</footer>
+{{!-- підвал --}}
