@@ -172,7 +172,7 @@ main {
   font-size: 20px;
 }
 .action-card-link:last-of-type                 {
-  /* font-size:- 14px; */
+  font-size: 14px;
 }
 /* {{!-- основна частина --}} */
 /* {{!-- підвал --}} */
