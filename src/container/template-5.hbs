@@ -8,36 +8,39 @@
 {{!-- шапка --}}
 {{!-- основна частина --}}
 <main>
-  <div class="main-block">
-    {{#with main}}
-      <img src="{{image}}" alt="main image" class="main-image">
-      <div class="main-container">
-        <h2 class='main-title'>{{heading}}</h2>
-        <p class='main-text'>{{descriotion}}</p>
-        <a href="{{href}}" class="main-button">{{button}}</a>
-      </div>
-    {{/with}} <!-- end of main -->
-  </div>
-  <div class="featured-block">
-    <div class="featured-cards">      
-      {{#each featured}}
-        <div class='featured-card'>
-          <img src="{{photo}}" alt="featured card image" class="featured-card-image">
-          <h2 class='featured-card-title'>{{heading}}</h2>
-          <p class='featured-card-text'>{{info}}</p>
-          <a href="{{linkUrl}}" class="featured-card-link">{{linkText}}</a>
-        </div>
-      {{/each}} <!-- end of featured -->
+  <div class="msgfm-container">
+    <div class="message-block">
+      {{#with messages}}        
+        <h3 class="message-title">{{title}}</h3>
+        {{#each list}}
+          <div class="list-name">{{name}}</div>
+          <p class="list-message">{{message}}</p>
+          <span class="list-day">{{day}}</span>
+        {{/each}} <!-- end of list -->
+      {{/with}} <!-- end of messages -->
     </div>
-    <div class="featurette-divider"></div>
+    <div class="form-block">
+      {{#with form}}
+        <h3 class="form-title">{{title}}</h3>
+        <div class="form-input-container">
+          {{#each inputs}}
+            <input type={{type}} name="{{name}}" placeholder='{{placeholder}}' id="form-input-{{id}}" class="form-input">
+          {{/each}} <!-- end of inputs -->
+        </div>
+        <checkbox class="form-checkbox"name="{{name}}"></checkbox>
+        <label for="{{name}}">{{label}}</label>
+        <button class="form-button">{{button}}</button>
+        <p class="form-text">{{info}}</p>
+      {{/with}} <!-- end of form -->
+    </div>
   </div>
-  <div class="actions-block">
-    {{#each actions}}
-      <div class="action-card">
-        <h4 class="action-card-title">{{heading}}</h4>
-        <a href="{{url}}" class="action-card-link">{{text}}</a>
+  <div class="advantage-container">
+    {{#each advantages}}
+      <div class="advantage-card">
+        <h3 class="advantage-title">{{title}}</h3>
+        <p class="advantage-text">{{text}}</p>
       </div>
-    {{/each}} <!-- end of actions -->
+    {{/each}} <!-- end of advantages -->      
   </div>
 </main>
 {{!-- основна частина --}}
