@@ -13,11 +13,14 @@
       {{#with messages}}        
         <h3 class="message-title">{{title}}</h3>
         {{#each list}}
-          <div class="list-name">{{name}}</div>
-          <p class="list-message">{{message}}</p>
-          <span class="list-day">{{day}}</span>
+          <div>
+            <div class="list-name">{{name}}</div>
+            <p class="list-message">{{message}}</p>
+            <div class="list-day">{{day}}</div>
+          </div>
         {{/each}} <!-- end of list -->
       {{/with}} <!-- end of messages -->
+      <a href="#">All messages</a>
     </div>
     <div class="form-block">
       {{#with form}}
@@ -27,8 +30,10 @@
             <input type={{type}} name="{{name}}" placeholder='{{placeholder}}' id="form-input-{{id}}" class="form-input">
           {{/each}} <!-- end of inputs -->
         </div>
-        <checkbox class="form-checkbox"name="{{name}}"></checkbox>
-        <label for="{{name}}">{{label}}</label>
+        <div>
+          <input type="checkbox" class="form-checkbox" id="{{checkbox.name}}"></input>
+          <label for="{{checkbox.name}}">{{checkbox.label}}</label>
+        </div>
         <button class="form-button">{{button}}</button>
         <p class="form-text">{{info}}</p>
       {{/with}} <!-- end of form -->
