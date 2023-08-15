@@ -1,4 +1,5 @@
 :root {
+	--border-color: #ced4da;
 	--color-white: #fff;
 	--color-black: #000;
 	--color-gray: #5a5a5a;
@@ -8,6 +9,7 @@
 
 	--size-m: 36px;
 	--size-md: 32px;
+	--size-xd: 24px;
 	--size-d: 16px;
 
 	--space-xl: 80px;
@@ -75,7 +77,7 @@ main {
 	gap: var(--space-l);
 }
 .message-block {
-	flex: 30 0 0;
+	flex: 31 0 0;
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-m);
@@ -86,7 +88,7 @@ main {
 }
 .message-title {
 	color: var(--color-text);
-	font-size: 24px;
+	font-size: var(--size-xd);
 	line-height: 80%;
 	padding-bottom: var(--space-xm);
 	border-bottom: 1px solid #D3DEE9;
@@ -94,7 +96,7 @@ main {
 .message-block div {
 	display: flex;
 	flex-direction: column;
-	gap: calc(var(--space-xm)-4);
+	gap: calc(var(--space-xm) - 4px);
 	color: var(--color-text);
 	position: relative;
 }
@@ -116,17 +118,41 @@ main {
 	align-self: flex-end;
 }
 .form-block {
-	flex: 20 0 0;
+	flex: 17 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-m);
+	padding: var(--space-m);
+	border-radius: var(--border-radius);
+	background-color: var(--color-white);
+	box-shadow: 0 4px	17px 0 rgba(0, 0, 0, 0.1);
+	color: var(--color-text);
 }
 .form-title {
+	text-align: center;
+	font-size: var(--size-xd);
 }
 .form-input-container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xm);
 }
 .form-input {
+	display: block;
+	padding: calc(var(--space-xm) + 4px);
+	border-radius: calc(var(--border-radius) / 3);
+	border: 1px solid var(--border-color);
 }
 .form-checkbox {
+	/* display: block; */
+	width: 13px;
+	height: 13px;
+	margin-right: 8px;
+	border-radius: calc(var(--border-radius) / 3);
+	border: 1px solid #767676;
 }
 .form-button {
+
 }
 .form-text {
 }
