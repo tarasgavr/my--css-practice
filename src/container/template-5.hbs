@@ -30,8 +30,9 @@
             <input type={{type}} name="{{name}}" placeholder='{{placeholder}}' id="form-input-{{id}}" class="form-input">
           {{/each}} <!-- end of inputs -->
         </div>
-        <div>
-          <input type="checkbox" class="form-checkbox" id="{{checkbox.name}}"></input>
+        <div class="form-checkbox">
+          <input type="checkbox" id="{{checkbox.name}}"></input>
+          <div></div>
           <label for="{{checkbox.name}}">{{checkbox.label}}</label>
         </div>
         <button class="form-button">{{button}}</button>

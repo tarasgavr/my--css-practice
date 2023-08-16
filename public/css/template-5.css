@@ -144,12 +144,28 @@ main {
 	border: 1px solid var(--border-color);
 }
 .form-checkbox {
-	/* display: block; */
-	width: 13px;
-	height: 13px;
-	margin-right: 8px;
-	border-radius: calc(var(--border-radius) / 3);
-	border: 1px solid #767676;
+	display: flex;
+	align-items: center;
+}
+.form-checkbox input {
+	display: none;
+}
+.form-checkbox input ~ label::before {
+	content: '\2713';  
+  text-align: center;
+  color: white;
+  line-height: 1em;
+  width: 1em;
+  height: 1em;
+  border: 1px inset #000;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  display: inline-block;
+  transition: color 1s;
+}
+.form-checkbox input:checked ~ label::before {
+	color: var(--color-form);
+	border: 1px solid var(--border-color);
 }
 .form-button {
 
