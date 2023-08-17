@@ -2,6 +2,7 @@
 	--border-color: #ced4da;
 	--color-white: #fff;
 	--color-black: #000;
+	--color-button: #0d6efd;
 	--color-gray: #5a5a5a;
 	--color-grayb: #6c757d;
 	--color-form: #563d7c;
@@ -116,6 +117,11 @@ main {
 }
 .message-block a {
 	align-self: flex-end;
+	text-decoration-color: transparent;
+	transition: text-decoration-color 1s;
+}
+.message-block a:hover {
+	text-decoration-color: initial;
 }
 .form-block {
 	flex: 17 0 0;
@@ -143,7 +149,7 @@ main {
 	border-radius: calc(var(--border-radius) / 3);
 	border: 1px solid var(--border-color);
 }
-.form-checkbox {
+.form-checkbox label {
 	display: flex;
 	align-items: center;
 }
@@ -151,34 +157,57 @@ main {
 	display: none;
 }
 .form-checkbox input ~ label::before {
-	content: '\2713';  
-  text-align: center;
-  color: white;
-  line-height: 1em;
-  width: 1em;
-  height: 1em;
-  border: 1px inset #000;
-  border-radius: 0.25em;
-  margin-right: 0.5em;
-  display: inline-block;
-  transition: color 1s;
+	content: '';  
+	display: inline-block;
+  width: 16px;
+	height: 16px;
+  border: 1px solid var(--color-black);
+  border-radius: calc(var(--border-radius) / 3);
+  margin-right: calc(var(--space-xm) - 4px);
+  transition: color border 1s;
 }
 .form-checkbox input:checked ~ label::before {
+	content: '\2713';
 	color: var(--color-form);
 	border: 1px solid var(--border-color);
 }
 .form-button {
-
+	color: var(--color-white);
+	padding: 8px 119px;
+	border-radius: calc(var(--border-radius) / 3);
+	border: 1px solid var(--color-button);
+	background-color: var(--color-button);
+	transition: opacity 1s;
+}
+.form-button:hover {
+	opacity: 0.7;
 }
 .form-text {
+	color: var(--color-grayb);
+	text-align: center;
+	line-height: 150%;
 }
 .advantage-container {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--space-m);
 }
 .advantage-card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: calc(var(--space-xm) - 3px);
+	width: 100%;
+	padding: calc(var(--space-m) - 2px);
 }
 .advantage-title {
+	color: var(--color-text);
+	font-size: 18px;
+	font-weight: 700;
 }
 .advantage-text {
+	color: #767676;
+	line-height: 150%;
 }
 /* {{!-- основна частина --}} */
 /* {{!-- підвал --}} */
