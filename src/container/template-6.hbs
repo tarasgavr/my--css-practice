@@ -1,0 +1,72 @@
+{{!-- шапка --}}
+<header class="template1-header">
+  {{> icon letter='B' }}
+  <nav class="my-nav">
+    {{> template1-nav list=header }}
+  </nav>
+</header>
+{{!-- шапка --}}
+{{!-- основна частина --}}
+<main>
+  <div class="msgfm-container">
+    <div class="message-block">
+      {{#with messages}}        
+        <h3 class="message-title">{{title}}</h3>
+        {{#each list}}
+          <div>
+            <div class="list-name">{{name}}</div>
+            <p class="list-message">{{message}}</p>
+            <div class="list-day">{{day}}</div>
+          </div>
+        {{/each}} <!-- end of list -->
+      {{/with}} <!-- end of messages -->
+      <a href="#">All messages</a>
+    </div>
+    <div class="form-block">
+      {{#with form}}
+        <h3 class="form-title">{{title}}</h3>
+        <div class="form-input-container">
+          {{#each inputs}}
+            <input type={{type}} name="{{name}}" placeholder='{{placeholder}}' id="form-input-{{id}}" class="form-input">
+          {{/each}} <!-- end of inputs -->
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" id="{{checkbox.name}}"></input>
+          <div></div>
+          <label for="{{checkbox.name}}">{{checkbox.label}}</label>
+        </div>
+        <button class="form-button">{{button}}</button>
+        <p class="form-text">{{info}}</p>
+      {{/with}} <!-- end of form -->
+    </div>
+  </div>
+  <div class="advantage-container">
+    {{#each advantages}}
+      <div class="advantage-card">
+        <h3 class="advantage-title">{{title}}</h3>
+        <p class="advantage-text">{{text}}</p>
+      </div>
+    {{/each}} <!-- end of advantages -->      
+  </div>
+</main>
+{{!-- основна частина --}}
+{{!-- підвал --}}
+<footer class="template1-footer">
+  <div class="b-copyright">
+    {{> icon letter='B' }}
+    <div class="template1-footerText">
+      Copyright 2023
+    </div>
+  </div>
+  {{#each footer}}
+  <div class="template1-footerHeaders">
+    <div class="template1-footerHeader">
+      {{title}}
+    </div>
+    <div class="template1-footerLinksText">
+      {{> template1-nav list=links isvertical=true }}
+    </div>
+  </div>
+  {{/each}} <!-- end of footer -->
+</footer>
+{{!-- підвал --}}
