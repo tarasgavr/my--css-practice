@@ -8,23 +8,15 @@
 {{!-- шапка --}}
 {{!-- основна частина --}}
 <main>
-  <div class="msgfm-container">
-    <div class="message-block">
-      {{#with messages}}        
-        <h3 class="message-title">{{title}}</h3>
-        {{#each list}}
-          <div>
-            <div class="list-name">{{name}}</div>
-            <p class="list-message">{{message}}</p>
-            <div class="list-day">{{day}}</div>
-          </div>
-        {{/each}} <!-- end of list -->
-      {{/with}} <!-- end of messages -->
-      <a href="#">All messages</a>
+  <div class="infm-container">
+    <div class="info-block">
+      {{#with info}}        
+        <h3 class="info-title">{{title}}</h3>
+        <p class="info-description">{{description}}</p>
+      {{/with}} <!-- end of info -->
     </div>
     <div class="form-block">
       {{#with form}}
-        <h3 class="form-title">{{title}}</h3>
         <div class="form-input-container">
           {{#each inputs}}
             <input type={{type}} name="{{name}}" placeholder='{{placeholder}}' id="form-input-{{id}}" class="form-input">
@@ -36,17 +28,34 @@
           <label for="{{checkbox.name}}">{{checkbox.label}}</label>
         </div>
         <button class="form-button">{{button}}</button>
+        <hr>
         <p class="form-text">{{info}}</p>
       {{/with}} <!-- end of form -->
     </div>
   </div>
-  <div class="advantage-container">
-    {{#each advantages}}
-      <div class="advantage-card">
-        <h3 class="advantage-title">{{title}}</h3>
-        <p class="advantage-text">{{text}}</p>
-      </div>
-    {{/each}} <!-- end of advantages -->      
+  <div class="updates-container">
+    {{#with updates}}
+      <h3 class="updates-title">{{title}}</h3>
+      {{#each list}}
+        <div class="updates-list-card">
+          <h4 class="updates-list-nickname">{{nickname}}</h4>
+          <p class="updates-list-description">{{description}}</p>
+        </div>
+      {{/each}} <!-- end of list -->
+      <a href="{{show_all.url}}" class="updates-list-link">{{show_all.text}}</a>
+    {{/with}} <!-- end of updates -->
+  </div>
+  <div class="expirience-container">
+    {{#with expirience}}
+      <h3 class="expirience-title">{{title}}</h3>
+      <div class="">{{badge}}</div>
+      {{#each list}}
+        <div class="expirience-list-card">
+          <h4 class="expirience-list-name">{{name}}</h4>
+          <p class="expirience-list-details">{{details}}</p>
+        </div>
+      {{/each}} <!-- end of list -->
+    {{/with}} <!-- end of expirience -->
   </div>
 </main>
 {{!-- основна частина --}}

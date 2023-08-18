@@ -73,81 +73,50 @@ main {
 	flex-direction: column;
 	gap: var(--space-xl);
 }
-.msgfm-container {
+.infm-container {
 	display: flex;
-	gap: var(--space-l);
-}
-.message-block {
-	flex: 31 0 0;
-	display: flex;
-	flex-direction: column;
 	gap: var(--space-m);
-	padding: var(--space-m);
-	border-radius: var(--border-radius);
-	background-color: var(--color-white);
-	box-shadow: 0 4px	17px 0 rgba(0, 0, 0, 0.1);
 }
-.message-title {
-	color: var(--color-text);
-	font-size: var(--size-xd);
-	line-height: 80%;
-	padding-bottom: var(--space-xm);
-	border-bottom: 1px solid #D3DEE9;
-}
-.message-block div {
+.info-block {
 	display: flex;
 	flex-direction: column;
-	gap: calc(var(--space-xm) - 4px);
+	justify-content: center;
+	gap: var(--space-m);
+	flex: 29 0 0;
 	color: var(--color-text);
-	position: relative;
 }
-.list-name {
+.info-title {
+	font-size: 56px;
 	font-weight: 700;
-	line-height: 125%;
+	line-height: 120%;
 }
-.list-message {
+.info-description {
+	font-size: var(--size-xd);
 	line-height: 150%;
 }
-.list-day {
-	color: var(--color-grayb);
-	line-height: 109.375%;
-	position: absolute;
-	left: 90%;
-	top: -100%;
-}
-.message-block a {
-	align-self: flex-end;
-	text-decoration-color: transparent;
-	transition: text-decoration-color 1s;
-}
-.message-block a:hover {
-	text-decoration-color: initial;
-}
 .form-block {
-	flex: 17 0 0;
 	display: flex;
 	flex-direction: column;
-	gap: var(--space-m);
-	padding: var(--space-m);
-	border-radius: var(--border-radius);
-	background-color: var(--color-white);
-	box-shadow: 0 4px	17px 0 rgba(0, 0, 0, 0.1);
-	color: var(--color-text);
-}
-.form-title {
-	text-align: center;
-	font-size: var(--size-xd);
+	align-items: flex-start;
+	gap: 20px;
+	flex: 19 0 0;
+	padding: 60px 48px;
+	border-radius: 4px;
+	border: 1px solid #DEE2E6;
+	background: #F8F9FA;
 }
 .form-input-container {
 	display: flex;
 	flex-direction: column;
-	gap: var(--space-xm);
+	gap: calc(var(--space-xm) - 4px);
 }
 .form-input {
 	display: block;
-	padding: calc(var(--space-xm) + 4px);
+	width: 298px;
+	padding: calc(var(--space-xm) + 4px) var(--space-xm);
 	border-radius: calc(var(--border-radius) / 3);
 	border: 1px solid var(--border-color);
+	background-color: var(--color-white);
 }
 .form-checkbox label {
 	display: flex;
@@ -187,27 +156,27 @@ main {
 	text-align: center;
 	line-height: 150%;
 }
-.advantage-container {
-	display: flex;
-	align-items: flex-start;
-	gap: var(--space-m);
+.updates-container {
 }
-.advantage-card {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: calc(var(--space-xm) - 3px);
-	width: 100%;
-	padding: calc(var(--space-m) - 2px);
+.updates-title {
 }
-.advantage-title {
-	color: var(--color-text);
-	font-size: 18px;
-	font-weight: 700;
+.updates-list-card {
 }
-.advantage-text {
-	color: #767676;
-	line-height: 150%;
+.updates-list-nickname {
+}
+.updates-list-description {
+}
+.updates-list-link {
+}
+.expirience-container {
+}
+.expirience-title {
+}
+.expirience-list-card {
+}
+.expirience-list-name {
+}
+.expirience-list-details {
 }
 /* {{!-- основна частина --}} */
 /* {{!-- підвал --}} */
