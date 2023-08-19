@@ -35,11 +35,16 @@
   </div>
   <div class="updates-container">
     {{#with updates}}
-      <h3 class="updates-title">{{title}}</h3>
+      <h6 class="updates-title">{{title}}</h6>
       {{#each list}}
         <div class="updates-list-card">
-          <h4 class="updates-list-nickname">{{nickname}}</h4>
-          <p class="updates-list-description">{{description}}</p>
+          <div class="updates-list-square">
+            <small>32&times;32</small>
+          </div>
+          <div>            
+            <h4 class="updates-list-nickname">{{nickname}}</h4>
+            <p>{{description}}</p>
+          </div>
         </div>
       {{/each}} <!-- end of list -->
       <a href="{{show_all.url}}" class="updates-list-link">{{show_all.text}}</a>
