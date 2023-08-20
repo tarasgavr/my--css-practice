@@ -47,19 +47,21 @@
           </div>
         </div>
       {{/each}} <!-- end of list -->
-      <a href="{{show_all.url}}" class="updates-list-link">{{show_all.text}}</a>
+      <a href="{{show_all.url}}">{{show_all.text}}</a>
     {{/with}} <!-- end of updates -->
   </div>
   <div class="expirience-container">
     {{#with expirience}}
       <h3 class="expirience-title">{{title}}</h3>
-      <div class="">{{badge}}</div>
-      {{#each list}}
-        <div class="expirience-list-card">
-          <h4 class="expirience-list-name">{{name}}</h4>
-          <p class="expirience-list-details">{{details}}</p>
+      <div class="expirience-badge">{{badge}}</div>
+        <div>          
+        {{#each list}}
+          <div class="expirience-list-card">
+            <h4 class="expirience-list-name">{{name}}</h4>
+            <p class="expirience-list-details">{{details}}</p>
+          </div>
+        {{/each}} <!-- end of list -->
         </div>
-      {{/each}} <!-- end of list -->
     {{/with}} <!-- end of expirience -->
   </div>
 </main>
