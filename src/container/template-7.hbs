@@ -1,88 +1,66 @@
 {{!-- шапка --}}
-<header class="template1-header">
-  {{> icon letter='B' }}
-  <nav class="my-nav">
-    {{> template1-nav list=header }}
-  </nav>
+<header class="template7-header">
+  {{#with header}}
+    <nav class="my-nav">
+      {{> icon letter=brandName }}
+      <span>
+        {{#each links}}
+          <a href="{{url}}">{{text}}</a>
+        {{/each}} <!-- end of links -->
+      </span>
+    </nav>
+    <div class="sub-header">
+      <div>
+        <span>Ad</span>
+        <a href="{{ad.url}}">{{ad.text}}: {{ad.url}}</a>
+      </div>
+      <div>
+        <h6 class="t7-userOnline-title">Users online</h6>
+        <h6 class="t7-userOnline-amount">{{userOnline}}</h6>
+      </div>
+    </div> 
+  {{/with}} <!-- end of header -->
 </header>
 {{!-- шапка --}}
 {{!-- основна частина --}}
 <main>
-  <div class="infm-container">
-    <div class="info-block">
-      {{#with info}}        
-        <h3 class="info-title">{{title}}</h3>
-        <p class="info-description">{{description}}</p>
-      {{/with}} <!-- end of info -->
-    </div>
-    <div class="form-block">
-      {{#with form}}
-        <div class="form-input-container">
-          {{#each inputs}}
-            <input type={{type}} name="{{name}}" placeholder='{{placeholder}}' id="form-input-{{id}}" class="form-input">
-          {{/each}} <!-- end of inputs -->
-        </div>
-        <div class="form-checkbox">
-          <input type="checkbox" id="{{checkbox.name}}"></input>
-          <div></div>
-          <label for="{{checkbox.name}}">{{checkbox.label}}</label>
-        </div>
-        <button class="form-button">{{button}}</button>
-        <hr>
-        <p class="form-text">{{info}}</p>
-      {{/with}} <!-- end of form -->
-    </div>
+  <div class="hero-block-7">
+    {{#with hero}}
+      <h2 class='hero-title-7'>{{title}}</h2>
+      <p class='hero-description-7'>{{description}}</p>
+      <a href="{{button.url}}" class="hero-button-7">{{button.text}}</a>
+    {{/with}} <!-- end of hero -->
   </div>
-  <div class="updates-container">
-    {{#with updates}}
-      <h6 class="updates-title">{{title}}</h6>
-      {{#each list}}
-        <div class="updates-list-card">
-          <div class="updates-list-square">
-            <small>32&times;32</small>
-          </div>
-          <div>            
-            <h4 class="updates-list-nickname">{{nickname}}</h4>
-            <p>{{description}}</p>
-          </div>
+  <div class="main-container">
+    <div class="about-block">
+      {{#with about}}        
+        <h3 class="about-heading">{{heading}}</h3>
+        <p class="about-info">{{info}}</p>
+      {{/with}} <!-- end of about -->
+    </div>
+    <div class="articles-block">
+      {{#each articles}}
+        <div class="article-card-{{id}}">
+          <img src="{{photo}}" alt="{{name}} image">
+          <h4>{{name}}</h4>
+          <p>{{description}}</p>
         </div>
-      {{/each}} <!-- end of list -->
-      <a href="{{show_all.url}}">{{show_all.text}}</a>
-    {{/with}} <!-- end of updates -->
-  </div>
-  <div class="expirience-container">
-    {{#with expirience}}
-      <h3 class="expirience-title">{{title}}</h3>
-      <div class="expirience-badge">{{badge}}</div>
-        <div>          
-        {{#each list}}
-          <div class="expirience-list-card">
-            <h4 class="expirience-list-name">{{name}}</h4>
-            <p class="expirience-list-details">{{details}}</p>
-          </div>
-        {{/each}} <!-- end of list -->
-        </div>
-    {{/with}} <!-- end of expirience -->
+      {{/each}} <!-- end of articles -->
+    </div>
   </div>
 </main>
 {{!-- основна частина --}}
 {{!-- підвал --}}
-<footer class="template1-footer">
-  <div class="b-copyright">
-    {{> icon letter='B' }}
-    <div class="template1-footerText">
-      Copyright 2023
+<footer class="template7-footer">
+  {{#with footer}}
+    <div class="template7-footerLinks">
+    {{#each pages}}
+      <a class="template7-footerLinksText" href="{{path}}">{{name}}</a>
+    {{/each}} <!-- end of pages -->
     </div>
-  </div>
-  {{#each footer}}
-  <div class="template1-footerHeaders">
-    <div class="template1-footerHeader">
-      {{title}}
+    <div class="footer-copyright">
+      {{copyright}}
     </div>
-    <div class="template1-footerLinksText">
-      {{> template1-nav list=links isvertical=true }}
-    </div>
-  </div>
-  {{/each}} <!-- end of footer -->
+  {{/with}} <!-- end of footer -->
 </footer>
 {{!-- підвал --}}

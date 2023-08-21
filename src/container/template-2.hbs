@@ -2,10 +2,10 @@
 <div class="page">
    <div class="page-content-2">
 		{{!-- шапка --}}
-		<header class="template1-header">
+		<header class="template-header">
 			{{> icon letter='B' }}
 			<nav class="my-nav">
-				{{> template1-nav list=header }}
+				{{> template-nav list=header }}
 			</nav>
 		</header>
 		{{!-- шапка --}}
@@ -15,7 +15,7 @@
 				{{#with hero}}
 					<h2 class='hero-title-2'>{{title}}</h2>
 					<p class='hero-text-2'>{{text}}</p>
-					<a href="{{button.url}}" class="hero-button">{{button.text}}</a>				  
+					<a href="{{button.url}}" class="hero-button">{{button.text}}</a>
 				{{/with}} <!-- end of hero -->
 			</div>
 			<div class="preview-block">
@@ -86,20 +86,20 @@
 		</main>
 		{{!-- основна частина --}}
 		{{!-- підвал --}}
-		<footer class="template1-footer">
+		<footer class="template-footer">
 			<div class="b-copyright">
 				{{> icon letter='B' }}
-				<div class="template1-footerText">
+				<div class="template-footerText">
 					Copyright 2023
 				</div>
 			</div>
 			{{#each footer}}
-			<div class="template1-footerHeaders">
-				<div class="template1-footerHeader">
+			<div class="template-footerHeaders">
+				<div class="template-footerHeader">
 					{{title}}
 				</div>
-				<div class="template1-footerLinksText">
-					{{> template1-nav list=links isvertical=true }}
+				<div class="template-footerLinksText">
+					{{> template-nav list=links isvertical=true }}
 				</div>
 			</div>
 			{{/each}} <!-- end of footer -->

@@ -29,7 +29,7 @@
 .page-7 {
 	display: flex;
 	justify-content: center;
-	background-color: var(--color-black);
+	background-color: #111827;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	font-size: var(--size-d);
@@ -37,22 +37,21 @@
 .page-content-7 {
 	display: flex;
 	flex-direction: column;
-	max-width: 1000px;
+	gap: 60px;
+	max-width: 1150px;
 	width: 100%;
-	gap: var(--space-xl);
+	color: var(--color-white);
 }
 /* {{!-- шапка --}} */
-.template1-header {
-	padding: var(--space-m);
+.template7-header {
 	display: flex;
-	justify-content: space-between;
-	border-bottom: 1px solid var(--color-black);
+	flex-direction: column;
 }
 .icon {
-	width: 24px;
-	height: 24px;
-	border-radius: 6px;
-	background-color: #563D7C;
+	display: flex;
+	border-radius: 10px;
+	background-color: #885FFB;
+	padding: 8px var(--space-xm);
 	text-align: center;
 	font-weight: 600;
 	color: var(--color-white);
@@ -61,16 +60,21 @@ ul {
 	margin: 0;
 	padding: 0;
 }
-nav.template1-nav {
+.my-nav {
 	display: inline-flex;
+	justify-content: space-between;
+	padding: var(--space-xm) 0;
+	border-bottom: 1px solid #253041;
 }
-.template1-nav-item a {
-	color: #343440;
-	text-decoration: none;
+.sub-header {
+	display: flex;
+	justify-content: space-between;
 }
-.template1-nav-item a:not(:last-of-type) {
-	margin-right: var(--space-m);
+.t7-userOnline-title {
 }
+.t7-userOnline-amount {
+}
+
 /* {{!-- шапка --}} */
 /* {{!-- основна частина --}} */
 main {
@@ -274,7 +278,7 @@ main {
 }
 /* {{!-- основна частина --}} */
 /* {{!-- підвал --}} */
-.template1-footer {
+.template7-footer {
 	display: flex;
 	justify-content: space-between;
 	padding-top: 12px;
@@ -284,29 +288,29 @@ main {
 	flex-direction: column;
 	gap: 12px;
 }
-.template1-footerText {
+.template7-footerText {
 	color: #6C757D;
 	font-size: 12.8px;
 }
-.template1-footerLinks {
+.template7-footerLinks {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
-.template1-footerHeaders {
+.template7-footerHeaders {
 	display: block;
 }
-.template1-footerHeader {
+.template7-footerHeader {
 	color: #212529;
 	font-size: 20px;
 	font-weight: 500;
 	margin-bottom: 12px;
 }
-.template1-footerLinksText {
+.template7-footerLinksText {
 	color: #6C757D;
 	font-size: 15px;
 }
-.template1-menu-down {
+.template7-menu-down {
 	display: flex;
 	flex-direction: column;
 }
