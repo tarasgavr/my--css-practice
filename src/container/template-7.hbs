@@ -15,8 +15,8 @@
         <a href="{{ad.url}}">{{ad.text}}: {{ad.url}}</a>
       </div>
       <div>
-        <h6 class="t7-userOnline-title">Users online</h6>
-        <h6 class="t7-userOnline-amount">{{userOnline}}</h6>
+        <h5>Users online</h5>
+        <h5>{{userOnline}}</h5>
       </div>
     </div> 
   {{/with}} <!-- end of header -->
@@ -39,11 +39,19 @@
       {{/with}} <!-- end of about -->
     </div>
     <div class="articles-block">
+      <div class="articles-block-title">
+        <h5>Our articles</h5>
+        <button>View all</button>
+      </div>
       {{#each articles}}
-        <div class="article-card-{{id}}">
-          <img src="{{photo}}" alt="{{name}} image">
-          <h4>{{name}}</h4>
-          <p>{{description}}</p>
+        <div id="article-card-{{id}}">
+          {{#if iSNew}}
+            <span class="article-card-badge">NEW</span>
+          {{/if}}
+          <img class="article-card-image" src="{{photo}}" alt="{{name}} image">
+          <h4 class="article-card-title">{{name}}</h4>
+          <p class="article-card-description">{{description}}</p>
+          <button class="article-card-button">Read all</button>
         </div>
       {{/each}} <!-- end of articles -->
     </div>
