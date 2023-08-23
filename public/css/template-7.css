@@ -91,6 +91,10 @@ ul {
 	color: var(--color-white);
 	text-decoration: none;
 }
+.sub-header div:last-child {
+	display: flex;
+	gap: 5px;
+}
 /* {{!-- шапка --}} */
 /* {{!-- основна частина --}} */
 main {
@@ -99,28 +103,105 @@ main {
 	gap: 60px;
 }
 .hero-block-7 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	height: 300px;
+	padding: 32px;
+	border-radius: var(--border-radius);
+	background: radial-gradient(632.95% 141.42% at 0.00% 0.00%, rgba(17, 24, 39, 0.00) 0%, rgba(78, 63, 146, 0.60) 100%);
+	box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
 }
 .hero-title-7 {
+	font-size:  var(--size-m);
+	font-weight: 700;
 }
 .hero-description-7 {
+	font-family: Inter;
+	color: #9CA3AF;
+	text-align: center;
+	line-height: 150%;
 }
 .hero-button-7 {
-}
-.main-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--color-white);
+	padding: 12px 119px;
+	border-radius: 10px;
+	background-color: #885FFB;
 }
 .about-block {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
+	padding: 32px;
+	border-radius: var(--border-radius);
+	background-color: rgba(42, 49, 65, 0.44);
+	backdrop-filter: blur(25px);
 }
 .about-heading {
+	font-size: var(--size-xd);
+	font-weight: 700;
 }
 .about-info {
+	font-family: Inter;
+	font-size: 14px;
+	line-height: 170%;
 }
 .articles-block {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+.articles-block-title {
+	display: flex;
+	justify-content: space-between;
+}
+.articles-block-title h5 {
+	font-size: 32px;
+	font-weight: 700;
+}
+.articles-block-title button {
+	display: flex;
+	padding: 12px 20px;
+	border-radius: 10px;
+	border: 1px solid #9CA3AF;
+	background-color: inherit;
+	color: var(--color-white);
+	transition: color background-color 1s;
+}
+.articles-block-title button:hover {
+	color: var(--color-black);
+	background-color: var(--color-white);
+}
+.article-cards {
+	display: flex;
+	gap: 32px;
 }
 .article-card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
 }
 .article-card-badge {
+	display: flex;
+	padding: 2px 6px;
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
 }
 .article-card-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+	border-radius: var(--border-radius);
+	position: relative;
 }
 .article-card-title {
 }

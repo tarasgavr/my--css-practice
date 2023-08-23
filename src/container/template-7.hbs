@@ -15,8 +15,8 @@
         <a href="{{ad.url}}">{{ad.text}}: {{ad.url}}</a>
       </div>
       <div>
-        <h5>Users online</h5>
-        <h5>{{userOnline}}</h5>
+        <div>Users online:</div>
+        <div>{{userOnline}}</div>
       </div>
     </div> 
   {{/with}} <!-- end of header -->
@@ -31,29 +31,29 @@
       <a href="{{button.url}}" class="hero-button-7">{{button.text}}</a>
     {{/with}} <!-- end of hero -->
   </div>
-  <div class="main-container">
-    <div class="about-block">
-      {{#with about}}        
-        <h3 class="about-heading">{{heading}}</h3>
-        <p class="about-info">{{info}}</p>
-      {{/with}} <!-- end of about -->
+  <div class="about-block">
+    {{#with about}}        
+      <h3 class="about-heading">{{heading}}</h3>
+      <p class="about-info">{{info}}</p>
+    {{/with}} <!-- end of about -->
+  </div>
+  <div class="articles-block">
+    <div class="articles-block-title">
+      <h5>Our articles</h5>
+      <button>View all</button>
     </div>
-    <div class="articles-block">
-      <div class="articles-block-title">
-        <h5>Our articles</h5>
-        <button>View all</button>
+    <div class="article-cards">
+    {{#each articles}}
+      <div id="article-card-{{id}}" class="article-card">
+        {{#if iSNew}}
+          <span class="article-card-badge">NEW</span>
+        {{/if}}
+        <img class="article-card-image" src="{{photo}}" alt="{{name}} image">
+        <h4 class="article-card-title">{{name}}</h4>
+        <p class="article-card-description">{{description}}</p>
+        <button class="article-card-button">Read all</button>
       </div>
-      {{#each articles}}
-        <div id="article-card-{{id}}">
-          {{#if iSNew}}
-            <span class="article-card-badge">NEW</span>
-          {{/if}}
-          <img class="article-card-image" src="{{photo}}" alt="{{name}} image">
-          <h4 class="article-card-title">{{name}}</h4>
-          <p class="article-card-description">{{description}}</p>
-          <button class="article-card-button">Read all</button>
-        </div>
-      {{/each}} <!-- end of articles -->
+    {{/each}} <!-- end of articles -->
     </div>
   </div>
 </main>
