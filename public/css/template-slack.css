@@ -1,3 +1,7 @@
+@font-face {
+	font-family: HelveticaNeueBold, sans-serif;
+	src: url('../font/HelveticaNeueBold.ttf');
+}
 :root {
 	--border-color: #ced4da;
 	--border-bottom-color: #dee2e6;
@@ -29,73 +33,16 @@
 .page-slack {
 	display: flex;
 	justify-content: center;
-	background-color: #111827;
-	font-family: 'Roboto', sans-serif;
+	background-color: var(--color-white);
+	font-family: HelveticaNeueBold, sans-serif;
 	font-weight: 400;
 	font-size: var(--size-d);
+	color: var(--color-white);
 }
 .page-content-slack {
-	display: flex;
-	flex-direction: column;
-	gap: 60px;
-	max-width: 1150px;
+	max-width: 1260px;
 	width: 100%;
-	color: var(--color-white);
 }
-/* {{!-- шапка --}} */
-.slack-header {
-	display: flex;
-	flex-direction: column;
-}
-.icon {
-	display: flex;
-	border-radius: 10px;
-	background-color: #885FFB;
-	padding: 8px var(--space-xm);
-	text-align: center;
-	font-weight: 600;
-	color: var(--color-white);
-}
-ul {
-	margin: 0;
-	padding: 0;
-}
-.my-nav {
-	display: inline-flex;
-	justify-content: space-between;
-	padding: var(--space-xm) 0;
-	border-bottom: 1px solid #253041;
-}
-.my-nav a {
-	color: var(--color-white);
-	text-decoration: none;
-}
-.my-nav a:not(:last-child) {
-	margin-right: var(--space-m);
-}
-.sub-header {
-	display: flex;
-	justify-content: space-between;
-	padding-top: var(--space-xm);
-	font-size: 14px;
-}
-.sub-header span {
-	padding: 2px 6px;
-	margin-right: 8px;
-	font-weight: 700;
-	color: rgb(130, 90, 251);
-	border-radius: calc(var(--border-radius) / 3);
-	background-color: rgba(130, 90, 251, .2);
-}
-.sub-header a {
-	color: var(--color-white);
-	text-decoration: none;
-}
-.sub-header div:last-child {
-	display: flex;
-	gap: 5px;
-}
-/* {{!-- шапка --}} */
 /* {{!-- основна частина --}} */
 main {
 	display: flex;
