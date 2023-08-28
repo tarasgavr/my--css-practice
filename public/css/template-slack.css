@@ -30,19 +30,39 @@
 	margin: 0;
 	padding: 0;
 }
-.page-slack {
-	display: flex;
-	justify-content: center;
-	background-color: var(--color-white);
+body {
 	font-family: HelveticaNeueBold, sans-serif;
 	font-weight: 400;
 	font-size: var(--size-d);
-	color: var(--color-white);
 }
 .page-content-slack {
+}
+.slack-header {
+	display: flex;
+	justify-content: center;
+	background-color: var(--color-white);
+}
+.hero-container {
 	max-width: 1260px;
 	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2,4fr);
 }
+.hero-block {
+}
+.hero-label {
+}
+.hero-title {
+}
+.hero-buttons {
+}
+.hero-image {
+}
+.hero-brands {
+}
+.hero-band {
+}
+
 /* {{!-- основна частина --}} */
 main {
 	display: flex;
