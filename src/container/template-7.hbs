@@ -1,0 +1,74 @@
+{{!-- шапка --}}
+<header class="template7-header">
+  {{#with header}}
+    <nav class="my-nav">
+      {{> icon letter=brandName }}
+      <span>
+        {{#each links}}
+          <a href="{{url}}">{{text}}</a>
+        {{/each}} <!-- end of links -->
+      </span>
+    </nav>
+    <div class="sub-header">
+      <div>
+        <span>Ad</span>
+        <a href="{{ad.url}}">{{ad.text}}: {{ad.url}}</a>
+      </div>
+      <div>
+        <div>Users online:</div>
+        <div>{{userOnline}}</div>
+      </div>
+    </div> 
+  {{/with}} <!-- end of header -->
+</header>
+{{!-- шапка --}}
+{{!-- основна частина --}}
+<main>
+  <div class="hero-block-7">
+    {{#with hero}}
+      <h2 class='hero-title-7'>{{title}}</h2>
+      <p class='hero-description-7'>{{description}}</p>
+      <a href="{{button.url}}" class="hero-button-7">{{button.text}}</a>
+    {{/with}} <!-- end of hero -->
+  </div>
+  <div class="about-block">
+    {{#with about}}        
+      <h3 class="about-heading">{{heading}}</h3>
+      <p class="about-info">{{info}}</p>
+    {{/with}} <!-- end of about -->
+  </div>
+  <div class="articles-block">
+    <div class="articles-block-title">
+      <h5>Our articles</h5>
+      <button>View all</button>
+    </div>
+    <div class="article-cards">
+    {{#each articles}}
+      <div id="article-card-{{id}}" class="article-card">
+        {{#if isNew}}
+          <span class="article-card-badge">NEW</span>
+        {{/if}}
+        <img class="article-card-image" src="{{photo}}" alt="{{name}} image">
+        <h4 class="article-card-title">{{name}}</h4>
+        <p class="article-card-description">{{description}}</p>
+        <button class="article-card-button">Read all</button>
+      </div>
+    {{/each}} <!-- end of articles -->
+    </div>
+  </div>
+</main>
+{{!-- основна частина --}}
+{{!-- підвал --}}
+<footer class="template7-footer">
+  {{#with footer}}
+    <div class="template7-footerLinks">
+    {{#each pages}}
+      <a class="template7-footerLinksText" href="{{path}}">{{name}}</a>
+    {{/each}} <!-- end of pages -->
+    </div>
+    <div class="footer-copyright">
+      {{copyright}}
+    </div>
+  {{/with}} <!-- end of footer -->
+</footer>
+{{!-- підвал --}}
