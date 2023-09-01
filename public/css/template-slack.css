@@ -1,5 +1,7 @@
 @font-face {
 	font-family: HelveticaNeueBold, sans-serif;
+	font-weight: 700;
+	font-style: normal;
 	src: url('../font/HelveticaNeueBold.ttf');
 }
 :root {
@@ -7,7 +9,7 @@
 	--border-bottom-color: #dee2e6;
 	--color-white: #fff;
 	--color-black: #000;
-	--color-button: #0d6efd;
+	--color-button: #611f69;
 	--color-gray: #5a5a5a;
 	--color-grayb: #6c757d;
 	--color-form: #563d7c;
@@ -22,6 +24,7 @@
 	--space-l: 40px;
 	--space-s: 36px;
 	--space-m: 24px;
+	--space-xdm: 16px;
 	--space-xm: 12px;
 
 	--border-radius: 12px;
@@ -35,187 +38,82 @@ body {
 	font-weight: 400;
 	font-size: var(--size-d);
 }
-.page-content-slack {
-}
 .slack-header {
 	display: flex;
 	justify-content: center;
 	background-color: var(--color-white);
 }
+.hero {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-s);
+}
 .hero-container {
+	margin-top: 100px;
 	max-width: 1260px;
 	width: 100%;
-	display: grid;
-	grid-template-columns: repeat(2,4fr);
+	display: flex;
+	gap: 64px;
 }
 .hero-block {
+	padding: 0 68px 16px 0;
+	font-weight: 700;
 }
-.hero-label {
+.text-container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xdm);
+	margin-bottom: 28px;
+	width: 478px;
 }
-.hero-title {
+.text-container h6 {
+	font-size: 14px;
+}
+.text-container h4 {
+	font-family: HelveticaNeueBold;
+	font-size: 50px;
+}
+.hero-text {
+	font-size: 20px;
+	margin-bottom: 24px;
 }
 .hero-buttons {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 8px;
+}
+.hero-buttons button {
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.8px;
+	border-radius: 4px;
+}
+.hero-buttons button:first-child {
+	padding: 20px 48px;
+	background-color: var(--color-button);
+	color: var(--color-white);
+}
+.hero-buttons button:last-child {
+	padding: 20px 52px;
+	background-color: var(--color-white);
+	border: 1px solid var(--color-button);
+	color: var(--color-button);
 }
 .hero-image {
+	
 }
 .hero-brands {
+	display: flex;
+	gap: var(--space-l);
+	padding: 12px 20px;
 }
-.hero-band {
+.hero-brand {
+	height: min-content;
 }
 
 /* {{!-- основна частина --}} */
-main {
-	display: flex;
-	flex-direction: column;
-	gap: 60px;
-}
-.hero-block-slack {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 20px;
-	height: 300px;
-	padding: 32px;
-	border-radius: var(--border-radius);
-	background: radial-gradient(632.95% 141.42% at 0.00% 0.00%, rgba(17, 24, 39, 0.00) 0%, rgba(78, 63, 146, 0.60) 100%);
-	box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-}
-.hero-title-slack {
-	font-size:  var(--size-m);
-	font-weight: 700;
-}
-.hero-description-slack {
-	font-family: Inter;
-	color: #9CA3AF;
-	text-align: center;
-	line-height: 150%;
-}
-.hero-button-slack {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: var(--color-white);
-	text-decoration: none;
-	padding: 12px 119px;
-	border-radius: 10px;
-	background-color: #885FFB;
-	transition: opacity 1s;
-}
-.hero-button-slack:hover {
-	opacity: 0.7;
-}
-.about-block {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 16px;
-	padding: 32px;
-	border-radius: var(--border-radius);
-	background-color: rgba(42, 49, 65, 0.44);
-	backdrop-filter: blur(25px);
-}
-.about-heading {
-	font-size: var(--size-xd);
-	font-weight: 700;
-}
-.about-info {
-	font-family: Inter;
-	font-size: 14px;
-	line-height: 170%;
-}
-.articles-block {
-	display: flex;
-	flex-direction: column;
-	gap: 32px;
-}
-.articles-block-title {
-	display: flex;
-	justify-content: space-between;
-}
-.articles-block-title h5 {
-	font-size: 32px;
-	font-weight: 700;
-}
-.articles-block-title button {
-	display: flex;
-	padding: 12px 20px;
-	border-radius: 10px;
-	border: 1px solid #9CA3AF;
-	background-color: inherit;
-	color: var(--color-white);
-	transition: background-color 1s;
-}
-.articles-block-title button:hover {
-	color: var(--color-black);
-	background-color: var(--color-white);
-}
-.article-cards {
-	display: flex;
-	gap: 32px;
-	position: relative;
-}
-.article-card {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 16px;
-}
-.article-card-badge {
-	display: flex;
-	padding: 2px 6px;
-	position: absolute;
-	top: 40%;
-	left: 60%;
-	border-radius: 4px;
-	background-color: rgba(251, 95, 95, 0.50);
-}
-.article-card-image {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: var(--border-radius);
-	width: 362px;
-}
-.article-card-title {
-	font-size: 18px;
-	font-weight: 700;
-}
-.article-card-description {
-	font-size: 14px;
-	line-height: 150%;
-	color: #9CA3AF;
-}
-.article-card-button {
-	display: flex;
-	padding: 8px 16px;
-	background-color: #885FFB;
-	border-radius: 10px;
-	color: var(--color-white);
-	font-size: 14px;
-	font-weight: 700;
-	transition: background-color 1s;
-}
-.article-card-button:hover {
-	background-color: #111827;
-}
+
 /* {{!-- основна частина --}} */
 /* {{!-- підвал --}} */
-.slack-footer {
-	display: flex;
-	justify-content: space-between;
-	padding: 16px 0 32px 0;
-	border-top: 1px solid #202A3B;
-}
-.slack-footerLinks {
-	display: flex;
-	gap: 16px;
-}
-.slack-footerLinksText {
-	color: var(--color-white);
-	text-decoration: none;
-}
-.footer-copyright {
-	color: #9CA3AF;
-}
+
 /* {{!-- підвал --}} */
