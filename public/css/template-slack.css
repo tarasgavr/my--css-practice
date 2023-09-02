@@ -23,6 +23,7 @@
 	--space-xl: 80px;
 	--space-l: 40px;
 	--space-s: 36px;
+	--space-sm: 28px;
 	--space-m: 24px;
 	--space-xdm: 16px;
 	--space-xm: 12px;
@@ -41,6 +42,7 @@ body {
 .slack-header {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	background-color: var(--color-white);
 }
 .hero {
@@ -56,26 +58,35 @@ body {
 	gap: 64px;
 }
 .hero-block {
+	display: flex;
+	gap: var(--space-sm);
 	padding: 0 68px 16px 0;
 	font-weight: 700;
+	flex-direction: column;
 }
-.text-container {
+.hero-block-header {
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-xdm);
-	margin-bottom: 28px;
-	width: 478px;
 }
-.text-container h6 {
+.hero-block-header h6 {
 	font-size: 14px;
 }
-.text-container h4 {
+.hero-block-header h4 {
 	font-family: HelveticaNeueBold;
 	font-size: 50px;
+	line-height: 1;
+	letter-spacing: -1.3px;
+	display: flex;
+}
+.hero-block-footer {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-m);
 }
 .hero-text {
 	font-size: 20px;
-	margin-bottom: 24px;
+	letter-spacing: -1.3px;
 }
 .hero-buttons {
 	display: grid;
@@ -99,18 +110,16 @@ body {
 	border: 1px solid var(--color-button);
 	color: var(--color-button);
 }
-.hero-image {
-	
-}
 .hero-brands {
 	display: flex;
 	gap: var(--space-l);
 	padding: 12px 20px;
+	align-items: center;
 }
 .hero-brand {
 	height: min-content;
 }
-
+/* {{!-- шапка --}} */
 /* {{!-- основна частина --}} */
 
 /* {{!-- основна частина --}} */
