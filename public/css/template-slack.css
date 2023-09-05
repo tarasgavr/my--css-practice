@@ -1,7 +1,6 @@
+@layer component, variant, main, responsive;
 @font-face {
 	font-family: 'HelveticaNeueBold';
-	font-weight: 700;
-	font-style: normal;
 	src: url('/font/HelveticaNeueBold.ttf');
 }
 :root {
@@ -39,58 +38,81 @@ body {
 	font-weight: 400;
 	font-size: var(--size-d);
 }
+@layer component {
+	.flex-row {
+		display: flex;
+		flex-direction: row;
+	}
+	.flex-column {
+		display: flex;
+		flex-direction: column;
+	}
+	.flex-justify-center {
+		display: flex;
+		justify-content: center;
+	}
+	.grid-col {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.grid-col2 {
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+	}
+}
+@layer variant {
+	.gap-64 {
+		gap: 64px;
+	}
+	.gap-36 {
+		gap: 36px;
+	}
+	.gap-28 {
+		gap: 28px;
+	}
+	.gap-24 {
+		gap: 24px;
+	}
+	.gap-16 {
+		gap: 16px;
+	}
+	.gap-8 {
+		gap: 8px;
+	}
+}
+@layer component {
+	.flex-row {
+		display: flex;
+	}
+}
+@layer component {
+	.flex-row {
+		display: flex;
+	}
+}
 .slack-header {
-	display: flex;
-	justify-content: center;
 	background-color: var(--color-white);
 }
 .hero {
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-s);
 	max-width: 1260px;
 	width: 100%;
 }
 .hero-container {
 	margin-top: 100px;
-	display: flex;
-	gap: 64px;
 }
 .hero-block {
-	display: flex;
-	gap: var(--space-sm);
 	padding: 0 68px 16px 0;
 	font-weight: 700;
-	flex-direction: column;
 }
-.hero-block-header {
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-xdm);
-}
-.hero-block-header h6 {
+.hero-block h6 {
 	font-size: 14px;
 }
-.hero-block-header h4 {
-	font-family: HelveticaNeueBold;
+.hero-block h4 {
 	font-size: 50px;
 	line-height: 1;
-	letter-spacing: -1.3px;
-	display: flex;
-}
-.hero-block-footer {
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-m);
 }
 .hero-text {
 	font-size: 20px;
-	letter-spacing: -1.3px;
-}
-.hero-buttons {
-	display: grid;
-	grid-template-columns: repeat(2,1fr);
-	gap: 8px;
 }
 .hero-buttons button {
 	font-size: 14px;
