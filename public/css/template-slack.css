@@ -1,42 +1,47 @@
-@layer component, variant, main, responsive;
-@font-face {
-	font-family: 'HelveticaNeueBold';
-	src: url('/font/HelveticaNeueBold.ttf');
+@layer reset, default, component, variant, main, responsive;
+@layer reset {
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	a {
+		text-decoration: none;
+	}
 }
-:root {
-	--border-color: #ced4da;
-	--border-bottom-color: #dee2e6;
-	--color-white: #fff;
-	--color-black: #000;
-	--color-button: #611f69;
-	--color-gray: #5a5a5a;
-	--color-grayb: #6c757d;
-	--color-form: #563d7c;
-	--color-text: #212529;
-
-	--size-m: 36px;
-	--size-md: 32px;
-	--size-xd: 24px;
-	--size-d: 16px;
-
-	--space-xl: 80px;
-	--space-l: 40px;
-	--space-s: 36px;
-	--space-sm: 28px;
-	--space-m: 24px;
-	--space-xdm: 16px;
-	--space-xm: 12px;
-
-	--border-radius: 12px;
-}
-* {
-	margin: 0;
-	padding: 0;
-}
-body {
-	font-family: 'HelveticaNeueBold', sans-serif;
-	font-weight: 400;
-	font-size: var(--size-d);
+@layer default {
+	@font-face {
+		font-family: 'HelveticaNeueBold';
+		src: url('/font/HelveticaNeueBold.ttf');
+	}
+	:root {
+		--color-white: #fff;
+		--color-black: #000;
+		--color-button: #611f69;
+		--color-gray: #5a5a5a;
+		--color-grayb: #6c757d;
+		--color-form: #563d7c;
+		--color-text: #212529;
+	
+		--size-m: 36px;
+		--size-md: 32px;
+		--size-xd: 24px;
+		--size-d: 16px;
+	
+		--space-xl: 64px;
+		--space-l: 40px;
+		--space-s: 36px;
+		--space-sm: 28px;
+		--space-m: 24px;
+		--space-xdm: 16px;
+		--space-xm: 8px;
+	
+		--border-radius: 12px;
+	}
+	body {
+		font-family: 'HelveticaNeueBold', sans-serif;
+		font-weight: 400;
+		font-size: var(--size-d);
+	}
 }
 @layer component {
 	.flex-row {
@@ -51,6 +56,10 @@ body {
 		display: flex;
 		justify-content: center;
 	}
+	.center {
+		max-width: 1260px;
+		width: 100%;
+	}
 	.grid-col {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -59,25 +68,49 @@ body {
 		display: grid;
 		grid-template-columns: repeat(2,1fr);
 	}
+	.button {
+		font-size: 14px;
+		font-weight: 700;
+		letter-spacing: 0.8px;
+		border-radius: 4px;
+	}
+	.image {
+		max-width: 100%;
+		height: auto;
+	}
 }
 @layer variant {
 	.gap-64 {
-		gap: 64px;
+		gap: var(--space-xl);
+	}
+	.gap-40 {
+		gap: var(--space-l);
 	}
 	.gap-36 {
-		gap: 36px;
+		gap: var(--space-s);
 	}
 	.gap-28 {
-		gap: 28px;
+		gap: var(--space-sm);
 	}
 	.gap-24 {
-		gap: 24px;
+		gap: var(--space-m);
 	}
 	.gap-16 {
-		gap: 16px;
+		gap: var(--space-xdm);
 	}
 	.gap-8 {
-		gap: 8px;
+		gap:var(--space-xm);
+	}
+	.button-filled {
+		padding: 20px 48px;
+		background-color: var(--color-button);
+		color: var(--color-white);
+	}
+	.button-outlined {
+		padding: 20px 52px;
+		background-color: var(--color-white);
+		border: 1px solid var(--color-button);
+		color: var(--color-button);
 	}
 }
 @layer component {
@@ -92,10 +125,6 @@ body {
 }
 .slack-header {
 	background-color: var(--color-white);
-}
-.hero {
-	max-width: 1260px;
-	width: 100%;
 }
 .hero-container {
 	margin-top: 100px;
@@ -114,26 +143,7 @@ body {
 .hero-text {
 	font-size: 20px;
 }
-.hero-buttons button {
-	font-size: 14px;
-	font-weight: 700;
-	letter-spacing: 0.8px;
-	border-radius: 4px;
-}
-.hero-buttons button:first-child {
-	padding: 20px 48px;
-	background-color: var(--color-button);
-	color: var(--color-white);
-}
-.hero-buttons button:last-child {
-	padding: 20px 52px;
-	background-color: var(--color-white);
-	border: 1px solid var(--color-button);
-	color: var(--color-button);
-}
 .hero-brands {
-	display: flex;
-	gap: var(--space-l);
 	padding: 12px 20px;
 	align-items: center;
 }
