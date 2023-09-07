@@ -56,8 +56,12 @@
 		display: flex;
 		justify-content: center;
 	}
-	.center {
-		max-width: 1260px;
+	.center1230 {
+		max-width: 1230px;
+		width: 100%;
+	}
+	.center1020 {
+		max-width: 1020px;
 		width: 100%;
 	}
 	.grid-col {
@@ -66,7 +70,7 @@
 	}
 	.grid-col2 {
 		display: grid;
-		grid-template-columns: repeat(2,1fr);
+		grid-template-columns: repeat(2,max-content);
 	}
 	.button {
 		font-size: 14px;
@@ -101,6 +105,9 @@
 	.gap-8 {
 		gap:var(--space-xm);
 	}
+	.spb {
+		justify-content: space-between;
+	}
 	.button-filled {
 		padding: 20px 48px;
 		background-color: var(--color-button);
@@ -134,14 +141,14 @@
 	font-weight: 700;
 }
 .hero-block h6 {
-	font-size: 14px;
+	font-size: 16px;
 }
 .hero-block h4 {
-	font-size: 50px;
+	font-size: 48px;
 	line-height: 1;
 }
 .hero-text {
-	font-size: 20px;
+	font-size: 19px;
 }
 .hero-brands {
 	padding: 12px 20px;

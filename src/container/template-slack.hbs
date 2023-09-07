@@ -1,6 +1,6 @@
 {{!-- шапка --}}
 <header class="slack-header flex-justify-center">
-  <section class="center flex-column gap-36">
+  <section class="center1230 flex-column gap-36">
     <div class="hero-container flex-row gap-64">
       <div class="hero-block flex-column gap-28">
         <div class="flex-column gap-16">
@@ -15,7 +15,7 @@
           </div>
         </div>
       </div>
-      <img src="/img/jpg/hero-full-ui.jpg" alt="Hero image" class="hero-image">
+      <img src="/img/jpg/hero-full-ui.jpg" alt="Hero image" class="image">
     </div>
     <div class="hero-brands flex-row gap-40">
       <img src="/img/png/airbnb-logo.png" alt="Hero brand" class="hero-brand">
@@ -32,90 +32,124 @@
 {{!-- шапка --}}
 {{!-- основна частина --}}
 <main class="slack-main flex-justify-center">
-  <section class="features-container-main center flex-column">
-    <div class="features-block-main flex-row">
-      <div class="features-block-header-main flex-column">
-        <h4 class="features-title">Work more easily with everyone</h4>
-        <p class="features-text">Stay on the same page and make decisions faster by bringing all of your work communication into one place.</p>
+  <div class="center1230 flex-column">
+    <section class="features-container-main flex-column">
+      <div class="features-block-main flex-row">
+        <div class="features-block-header-main flex-column">
+          <h4 class="features-title">Work more easily with everyone</h4>
+          <p class="features-text">Stay on the same page and make decisions faster by bringing all of your work communication into one place.</p>
+        </div>
+        <img src="/img/jpg/img-work-easily.jpg" alt="Features main image" class="image">
       </div>
-      <img src="/img/jpg/img-work-easily.jpg" alt="Features main image" class="image">
-    </div>
-    <div class="features-grid-main">
-      <div class="features-grid-item">
-        <img src="/img/svg/connect.svg" alt="Slack connect" class="features-grid-icon">
-        <h5 class="features-grid-title">Slack connect</h5>
-        <p class="features-grid-text">Collaborate with teams at other companies the same way you do with teams at your own.</p>
-        <span class="features-grid-arrow"></span>
+      <div class="features-grid-main">
+        <div class="features-grid-item">
+          <img src="/img/svg/connect.svg" alt="Slack connect" class="features-grid-icon">
+          <h5 class="features-grid-title">Slack connect</h5>
+          <p class="features-grid-text">Collaborate with teams at other companies the same way you do with teams at your own.</p>
+          <span class="slack-arrow"></span>
+        </div>
+        <div class="features-grid-item">
+          <img src="/img/svg/chanels.svg" alt="Channels" class="features-grid-icon">
+          <h5 class="features-grid-title">Channels</h5>
+          <span class="slack-arrow"></span>
+        </div>      
+        <div class="features-grid-item">
+          <img src="/img/svg/canvas.svg" alt="CanvaS" class="features-grid-icon">
+          <h5 class="features-grid-title">CanvaS</h5>
+          <span class="slack-arrow"></span>
+        </div>      
+        <div class="features-grid-item">
+          <img src="/img/svg/huddies.svg" alt="Huddies" class="features-grid-icon">
+          <h5 class="features-grid-title">Huddies</h5>
+          <span class="slack-arrow"></span>
+        </div>      
+        <div class="features-grid-item">
+          <img src="/img/svg/messaging.svg" alt="Messaging" class="features-grid-icon">
+          <h5 class="features-grid-title">Messaging</h5>
+          <span class="slack-arrow"></span>
+        </div>      
+        <div class="features-grid-item">
+          <img src="/img/svg/clips.svg" alt="Clips" class="features-grid-icon">
+          <h5 class="features-grid-title">Clips</h5>
+          <span class="slack-arrow"></span>
+        </div>      
+        <div class="features-grid-item">
+          <img src="/img/svg/accessibility.svg" alt="Accessibility" class="features-grid-icon">
+          <h5 class="features-grid-title">Accessibility</h5>
+          <span class="slack-arrow"></span>
+        </div>      
       </div>
-      <div class="features-grid-item">
-        <img src="/img/svg/chanels.svg" alt="Channels" class="features-grid-icon">
-        <h5 class="features-grid-title">Channels</h5>
-        <span class="features-grid-arrow"></span>
-      </div>      
-      <div class="features-grid-item">
-        <img src="/img/svg/canvas.svg" alt="CanvaS" class="features-grid-icon">
-        <h5 class="features-grid-title">CanvaS</h5>
-        <span class="features-grid-arrow"></span>
-      </div>      
-      <div class="features-grid-item">
-        <img src="/img/svg/huddies.svg" alt="Huddies" class="features-grid-icon">
-        <h5 class="features-grid-title">Huddies</h5>
-        <span class="features-grid-arrow"></span>
-      </div>      
-      <div class="features-grid-item">
-        <img src="/img/svg/messaging.svg" alt="Messaging" class="features-grid-icon">
-        <h5 class="features-grid-title">Messaging</h5>
-        <span class="features-grid-arrow"></span>
-      </div>      
-      <div class="features-grid-item">
-        <img src="/img/svg/clips.svg" alt="Clips" class="features-grid-icon">
-        <h5 class="features-grid-title">Clips</h5>
-        <span class="features-grid-arrow"></span>
-      </div>      
-      <div class="features-grid-item">
-        <img src="/img/svg/accessibility.svg" alt="Accessibility" class="features-grid-icon">
-        <h5 class="features-grid-title">Accessibility</h5>
-        <span class="features-grid-arrow"></span>
-      </div>      
-    </div>
-  </section>
-  <section class="features-container-secondary center flex-column">
-    <div class="features-block-secondary flex-row">
-      <img src="/img/jpg/img-what-you-need.jpg" alt="Features secondary image" class="image">
-      <div class="features-block-header-secondary flex-column">
-        <h4 class="features-title">What you need, when you need it</h4>
-        <p class="features-text">Spend less time shuffling tabs with a comprehensive message archive and all your work tools at your fingertips.</p>
+    </section>
+    <section class="features-container-secondary flex-column">
+      <div class="features-block-secondary flex-row">
+        <img src="/img/jpg/img-what-you-need.jpg" alt="Features secondary image" class="image">
+        <div class="features-block-header-secondary flex-column">
+          <h4 class="features-title">What you need, when you need it</h4>
+          <p class="features-text">Spend less time shuffling tabs with a comprehensive message archive and all your work tools at your fingertips.</p>
+        </div>
       </div>
-    </div>
-    <div class="features-grid-secondary">
-      <div class="features-grid-item">
-        <img src="/img/svg/apps.svg" alt="Apps and Integrations" class="features-grid-icon">
-        <h5 class="features-grid-title">Apps and Integrations</h5>
-        <p class="features-grid-text">Streamline work by connecting Slack with other services like Google Drive, Office 365 and over 2,200 more.</p>
-        <span class="features-grid-arrow"></span>
-      </div>     
-      <div class="features-grid-item">
-        <img src="/img/svg/apps.svg" alt="Workflow Builder" class="features-grid-icon">
-        <h5 class="features-grid-title">Workflow Builder</h5>
-        <p class="features-grid-text">Automate routine actions and communication, so you can get back to the kind of work only humans can do.</p>
-        <span class="features-grid-arrow"></span>
-      </div>     
-      <div class="features-grid-item">
-        <img src="/img/svg/Search.svg" alt="Search" class="features-grid-icon">
-        <h5 class="features-grid-title">Search</h5>
-        <span class="features-grid-arrow"></span>
-      </div>      
-      <div class="features-grid-item">
-        <img src="/img/svg/sharing.svg" alt="File sharing" class="features-grid-icon">
-        <h5 class="features-grid-title">File sharing</h5>
-        <span class="features-grid-arrow"></span>
+      <div class="features-grid-secondary">
+        <div class="features-grid-item">
+          <img src="/img/svg/apps.svg" alt="Apps and Integrations" class="features-grid-icon">
+          <h5 class="features-grid-title">Apps and Integrations</h5>
+          <p class="features-grid-text">Streamline work by connecting Slack with other services like Google Drive, Office 365 and over 2,200 more.</p>
+          <span class="slack-arrow"></span>
+        </div>     
+        <div class="features-grid-item">
+          <img src="/img/svg/apps.svg" alt="Workflow Builder" class="features-grid-icon">
+          <h5 class="features-grid-title">Workflow Builder</h5>
+          <p class="features-grid-text">Automate routine actions and communication, so you can get back to the kind of work only humans can do.</p>
+          <span class="slack-arrow"></span>
+        </div>     
+        <div class="features-grid-item">
+          <img src="/img/svg/Search.svg" alt="Search" class="features-grid-icon">
+          <h5 class="features-grid-title">Search</h5>
+          <span class="slack-arrow"></span>
+        </div>      
+        <div class="features-grid-item">
+          <img src="/img/svg/sharing.svg" alt="File sharing" class="features-grid-icon">
+          <h5 class="features-grid-title">File sharing</h5>
+          <span class="slack-arrow"></span>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </main>
 {{!-- основна частина --}}
 {{!-- підвал --}}
-<footer class="slack-footer">
-  
+<footer class="slack-footer flex-justify-center">
+  <div class="flex-column">
+    <div class="center1020 flex-row gap-36 delivero-container-main">
+      <div class="flex-column delivero-image-col">
+        <img src="/img/jpg/img-deliveroo.jpg" alt="delivero image" class="image">
+      </div>
+      <div class="flex-column">
+        <blockquote class="delivero-quote">
+          The thing that keeps us connected the most is Slack. It’s a very immediate and straightforward method of communication, and really the only channel that people prefer and enjoy using.
+        </blockquote>
+        <img src="/img/png/deliveroo.png" alt="delivero icon" class="image">
+        <h6 class="delivero-title">Will Sprunt, CIO, Deliveroo</h6>
+      </div>
+    </div>
+    <div class="center1230 flex-row delivero-container-secondary">
+      <div class="flex-column gap-40">
+        <div class="flex-row spb">
+          <div class="flex-column">
+            <img src="../../public/img/jpg/slack-101.jpg" alt="slack image" class="image">
+            <div class="flex-column">
+              <span class="slack-image-title">
+                The thing that keeps us connected the most is Slack. It’s a very immediate and straightforward method of communication, and really the only channel that people prefer and enjoy using.
+              </span>
+              <h6 class="slack-image-text">Will Sprunt, CIO, Deliveroo</h6>
+            </div>
+            <div class="learn-block">
+              <h5 class="learn-text">Learn</h5>
+              <span class="slack-arrow"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 {{!-- підвал --}}
