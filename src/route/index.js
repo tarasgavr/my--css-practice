@@ -1067,6 +1067,58 @@ router.get('/template-slack', function (req, res) {
     page: {
       title: "Template Slack"
     },
+    gridMain: [
+      {
+        img: "/img/svg/connect.svg",
+        title: "Slack connect",
+        text: "Collaborate with teams at other companies the same way you do with teams at your own.",
+      },
+      {
+        img: "/img/svg/chanels.svg",
+        title: "chanels",
+      },
+      {
+        img: "/img/svg/canvas.svg",
+        title: "canvas",
+      },
+      {
+        img: "/img/svg/huddies.svg",
+        title: "huddies",
+      },
+      {
+        img: "/img/svg/messaging.svg",
+        title: "messaging",
+      },
+      {
+        img: "/img/svg/clips.svg",
+        title: "clips",
+      },
+      {
+        img: "/img/svg/accessibility.svg",
+        title: "accessibility",
+      },
+    ],
+    gridSecondary: [
+      {
+        img: "/img/svg/apps.svg",
+        title: "Apps and Integrations",
+        text: "Streamline work by connecting Slack with other services like Google Drive, Office 365 and over 2,200 more.",
+      },
+      {
+        img: "/img/svg/workflow.svg",
+        title: "Workflow Builder",
+        text: "Automate routine actions and communication, so you can get back to the kind of work only humans can do.",
+      },
+      {
+        img: "/img/svg/search.svg",
+        title: "search",
+      },
+      {
+        img: "/img/svg/sharing.svg",
+        title: "File sharing",
+      },
+    ],
+
   })
   //                  ↑↑ сюди вводимо JSON дані
 })

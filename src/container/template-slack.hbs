@@ -89,13 +89,17 @@
         </div>
       </div>
       <div class="features-grid-secondary">
-        <div class="features-grid-item">
-          <img src="/img/svg/apps.svg" alt="Apps and Integrations" class="features-grid-icon">
-          <h5 class="features-grid-title">Apps and Integrations</h5>
-          <p class="features-grid-text">Streamline work by connecting Slack with other services like Google Drive, Office 365 and over 2,200 more.</p>
-          <span class="slack-arrow"></span>
-        </div>     
-        <div class="features-grid-item">
+        {{#each gridSecondary}}
+          <div class="features-grid-item">
+            <img src="{{img}}" alt="{{title}}" class="features-grid-icon">
+            <h5 class="features-grid-title">{{title}}</h5>
+            {{#if text}}              
+              <p class="features-grid-text">{{text}}</p>
+            {{/if}}
+            <span class="slack-arrow"></span>
+          </div>
+        {{/each}} <!-- end of gridSecondary -->    
+        {{!-- <div class="features-grid-item">
           <img src="/img/svg/apps.svg" alt="Workflow Builder" class="features-grid-icon">
           <h5 class="features-grid-title">Workflow Builder</h5>
           <p class="features-grid-text">Automate routine actions and communication, so you can get back to the kind of work only humans can do.</p>
@@ -110,7 +114,7 @@
           <img src="/img/svg/sharing.svg" alt="File sharing" class="features-grid-icon">
           <h5 class="features-grid-title">File sharing</h5>
           <span class="slack-arrow"></span>
-        </div>
+        </div> --}}
       </div>
     </section>
   </div>
