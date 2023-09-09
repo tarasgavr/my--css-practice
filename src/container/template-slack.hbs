@@ -41,43 +41,17 @@
         </div>
         <img src="/img/jpg/img-work-easily.jpg" alt="Features main image" class="image">
       </div>
-      <div class="features-grid-main">
-        <div class="features-grid-item">
-          <img src="/img/svg/connect.svg" alt="Slack connect" class="features-grid-icon">
-          <h5 class="features-grid-title">Slack connect</h5>
-          <p class="features-grid-text">Collaborate with teams at other companies the same way you do with teams at your own.</p>
-          <span class="slack-arrow"></span>
-        </div>
-        <div class="features-grid-item">
-          <img src="/img/svg/chanels.svg" alt="Channels" class="features-grid-icon">
-          <h5 class="features-grid-title">Channels</h5>
-          <span class="slack-arrow"></span>
-        </div>      
-        <div class="features-grid-item">
-          <img src="/img/svg/canvas.svg" alt="CanvaS" class="features-grid-icon">
-          <h5 class="features-grid-title">CanvaS</h5>
-          <span class="slack-arrow"></span>
-        </div>      
-        <div class="features-grid-item">
-          <img src="/img/svg/huddies.svg" alt="Huddies" class="features-grid-icon">
-          <h5 class="features-grid-title">Huddies</h5>
-          <span class="slack-arrow"></span>
-        </div>      
-        <div class="features-grid-item">
-          <img src="/img/svg/messaging.svg" alt="Messaging" class="features-grid-icon">
-          <h5 class="features-grid-title">Messaging</h5>
-          <span class="slack-arrow"></span>
-        </div>      
-        <div class="features-grid-item">
-          <img src="/img/svg/clips.svg" alt="Clips" class="features-grid-icon">
-          <h5 class="features-grid-title">Clips</h5>
-          <span class="slack-arrow"></span>
-        </div>      
-        <div class="features-grid-item">
-          <img src="/img/svg/accessibility.svg" alt="Accessibility" class="features-grid-icon">
-          <h5 class="features-grid-title">Accessibility</h5>
-          <span class="slack-arrow"></span>
-        </div>      
+      <div class="grid-col4-row2">
+        {{#each gridMain}}
+          <div class="features-grid-item {{#if text}}grid-extrow{{/if}}">
+            <img src="{{img}}" alt="{{title}}" class="features-grid-icon">
+            <h5 class="features-grid-title">{{title}}</h5>
+            {{#if text}}            
+              <p class="features-grid-text">{{text}}</p>
+            {{/if}}
+            <span class="slack-arrow"></span>
+          </div>
+        {{/each}} <!-- end of gridMain -->    
       </div>
     </section>
     <section class="features-container-secondary flex-column">
@@ -88,9 +62,9 @@
           <p class="features-text">Spend less time shuffling tabs with a comprehensive message archive and all your work tools at your fingertips.</p>
         </div>
       </div>
-      <div class="features-grid-secondary">
+      <div class="grid-col3-row2">
         {{#each gridSecondary}}
-          <div class="features-grid-item">
+          <div class="features-grid-item {{#if text}}grid-extrow{{/if}}">
             <img src="{{img}}" alt="{{title}}" class="features-grid-icon">
             <h5 class="features-grid-title">{{title}}</h5>
             {{#if text}}              
@@ -98,23 +72,7 @@
             {{/if}}
             <span class="slack-arrow"></span>
           </div>
-        {{/each}} <!-- end of gridSecondary -->    
-        {{!-- <div class="features-grid-item">
-          <img src="/img/svg/apps.svg" alt="Workflow Builder" class="features-grid-icon">
-          <h5 class="features-grid-title">Workflow Builder</h5>
-          <p class="features-grid-text">Automate routine actions and communication, so you can get back to the kind of work only humans can do.</p>
-          <span class="slack-arrow"></span>
-        </div>     
-        <div class="features-grid-item">
-          <img src="/img/svg/Search.svg" alt="Search" class="features-grid-icon">
-          <h5 class="features-grid-title">Search</h5>
-          <span class="slack-arrow"></span>
-        </div>      
-        <div class="features-grid-item">
-          <img src="/img/svg/sharing.svg" alt="File sharing" class="features-grid-icon">
-          <h5 class="features-grid-title">File sharing</h5>
-          <span class="slack-arrow"></span>
-        </div> --}}
+        {{/each}} <!-- end of gridSecondary --> 
       </div>
     </section>
   </div>
@@ -137,20 +95,11 @@
     </div>
     <div class="center1230 flex-row delivero-container-secondary">
       <div class="flex-column gap-40">
-        <div class="flex-row spb">
-          <div class="flex-column">
-            <img src="../../public/img/jpg/slack-101.jpg" alt="slack image" class="image">
-            <div class="flex-column">
-              <span class="slack-image-title">
-                The thing that keeps us connected the most is Slack. It’s a very immediate and straightforward method of communication, and really the only channel that people prefer and enjoy using.
-              </span>
-              <h6 class="slack-image-text">Will Sprunt, CIO, Deliveroo</h6>
-            </div>
-            <div class="learn-block">
-              <h5 class="learn-text">Learn</h5>
-              <span class="slack-arrow"></span>
-            </div>
-          </div>
+        <h4 class="slack-text">Explore more about working in Slack</h4>
+        <div class="flex-row gap-80">
+          {{#each cards}}            
+            {{> slack-card img=img title=title text=text }}
+          {{/each}} <!-- end of cards -->
         </div>
       </div>
     </div>
