@@ -35,13 +35,13 @@
   <div class="center1230 flex-column">
     <section class="features-container-main flex-column">
       <div class="features-block-main flex-row">
-        <div class="features-block-header-main flex-column">
+        <div class="features-block-header-main flex-column gap-16">
           <h4 class="features-title">Work more easily with everyone</h4>
           <p class="features-text">Stay on the same page and make decisions faster by bringing all of your work communication into one place.</p>
         </div>
         <img src="/img/jpg/img-work-easily.jpg" alt="Features main image" class="image">
       </div>
-      <div class="grid-col4-row2">
+      <div class="grid-col4-row2 gap-16 gridMain">
         {{#each gridMain}}
           <div class="features-grid-item {{#if text}}grid-extrow{{/if}}">
             <img src="{{img}}" alt="{{title}}" class="features-grid-icon">
@@ -62,7 +62,7 @@
           <p class="features-text">Spend less time shuffling tabs with a comprehensive message archive and all your work tools at your fingertips.</p>
         </div>
       </div>
-      <div class="grid-col3-row2">
+      <div class="grid-col3-row2 gridSecondary">
         {{#each gridSecondary}}
           <div class="features-grid-item {{#if text}}grid-extrow{{/if}}">
             <img src="{{img}}" alt="{{title}}" class="features-grid-icon">
@@ -98,7 +98,17 @@
         <h4 class="slack-text">Explore more about working in Slack</h4>
         <div class="flex-row gap-80">
           {{#each cards}}            
-            {{> slack-card img=img title=title text=text }}
+            <div class="flex-column">
+              <img src="{{img}}" alt="{{title}}" class="image">
+              <div class="flex-column slack-col">
+              <h6 class="slack-image-title">{{title}}</h6>
+              <h6 class="slack-image-text">{{text}}</h6>
+              </div>
+              <div class="learn-block">
+              <h5 class="learn-text">Learn more</h5>
+              <span class="slack-arrow"></span>
+              </div>
+            </div>
           {{/each}} <!-- end of cards -->
         </div>
       </div>
