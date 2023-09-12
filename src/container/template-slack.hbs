@@ -43,15 +43,8 @@
       </div>
       <div class="grid-col4-row2 gap-16 gridMain">
         {{#each gridMain}}
-          <div class="features-grid-item {{#if text}}grid-extrow{{/if}}">
-            <img src="{{img}}" alt="{{title}}" class="features-grid-icon">
-            <h5 class="features-grid-title">{{title}}</h5>
-            {{#if text}}            
-              <p class="features-grid-text">{{text}}</p>
-            {{/if}}
-            <span class="slack-arrow"></span>
-          </div>
-        {{/each}} <!-- end of gridMain -->    
+          {{> slack-grid-item img=img title=title text=text arrow=arrow }}
+        {{/each}} <!-- end of gridMain -->  
       </div>
     </section>
     <section class="features-container-secondary flex-column">
@@ -62,16 +55,9 @@
           <p class="features-text">Spend less time shuffling tabs with a comprehensive message archive and all your work tools at your fingertips.</p>
         </div>
       </div>
-      <div class="grid-col3-row2 gridSecondary">
+      <div class="grid-col3-row2 gap-16 gridSecondary">
         {{#each gridSecondary}}
-          <div class="features-grid-item {{#if text}}grid-extrow{{/if}}">
-            <img src="{{img}}" alt="{{title}}" class="features-grid-icon">
-            <h5 class="features-grid-title">{{title}}</h5>
-            {{#if text}}              
-              <p class="features-grid-text">{{text}}</p>
-            {{/if}}
-            <span class="slack-arrow"></span>
-          </div>
+          {{> slack-grid-item img=img title=title text=text arrow=arrow }}
         {{/each}} <!-- end of gridSecondary --> 
       </div>
     </section>
@@ -82,10 +68,10 @@
 <footer class="slack-footer flex-justify-center">
   <div class="flex-column">
     <div class="center1020 flex-row gap-36 delivero-container-main">
-      <div class="flex-column delivero-image-col">
-        <img src="/img/jpg/img-deliveroo.jpg" alt="delivero image" class="image">
+      <div class="flex-column flex-justify-center">
+        <img src="/img/jpg/img-deliveroo.jpg" alt="delivero image">
       </div>
-      <div class="flex-column">
+      <div class="flex-column gap-24 delivero-block">
         <blockquote class="delivero-quote">
           The thing that keeps us connected the most is Slack. It’s a very immediate and straightforward method of communication, and really the only channel that people prefer and enjoy using.
         </blockquote>
@@ -93,6 +79,7 @@
         <h6 class="delivero-title">Will Sprunt, CIO, Deliveroo</h6>
       </div>
     </div>
+  <div class="flex-column">
     <div class="center1230 flex-row delivero-container-secondary">
       <div class="flex-column gap-40">
         <h4 class="slack-text">Explore more about working in Slack</h4>
@@ -113,6 +100,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </footer>
 {{!-- підвал --}}

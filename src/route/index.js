@@ -1072,30 +1072,37 @@ router.get('/template-slack', function (req, res) {
         img: "/img/svg/connect.svg",
         title: "Slack connect",
         text: "Collaborate with teams at other companies the same way you do with teams at your own.",
+        arrow: "/img/svg/arrow.svg"
       },
       {
         img: "/img/svg/chanels.svg",
         title: "chanels",
+        arrow: "/img/svg/arrow.svg"
       },
       {
         img: "/img/svg/canvas.svg",
         title: "canvas",
+        arrow: "/img/svg/arrow.svg"
       },
       {
         img: "/img/svg/huddies.svg",
         title: "huddies",
+        arrow: "/img/svg/arrow.svg"
       },
       {
         img: "/img/svg/messaging.svg",
         title: "messaging",
+        arrow: "/img/svg/arrow.svg"
       },
       {
         img: "/img/svg/clips.svg",
         title: "clips",
+        arrow: "/img/svg/arrow.svg"
       },
       {
         img: "/img/svg/accessibility.svg",
         title: "accessibility",
+        arrow: "/img/svg/arrow.svg"
       },
     ],
     gridSecondary: [
@@ -1103,19 +1110,23 @@ router.get('/template-slack', function (req, res) {
         img: "/img/svg/apps.svg",
         title: "Apps and Integrations",
         text: "Streamline work by connecting Slack with other services like Google Drive, Office 365 and over 2,200 more.",
+        arrow: "/img/svg/arrow.svg",
       },
       {
         img: "/img/svg/workflow.svg",
         title: "Workflow Builder",
         text: "Automate routine actions and communication, so you can get back to the kind of work only humans can do.",
+        arrow: "/img/svg/arrow.svg",
       },
       {
         img: "/img/svg/search.svg",
         title: "search",
+        arrow: "/img/svg/arrow.svg",
       },
       {
         img: "/img/svg/sharing.svg",
         title: "File sharing",
+        arrow: "/img/svg/arrow.svg",
       },
     ],
     cards: [

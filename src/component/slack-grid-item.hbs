@@ -1,11 +1,8 @@
-<div class="flex-column">
-  <img src="{{img}}" alt="{{title}}" class="image">
-  <div class="flex-column slack-col">
-  <h6 class="slack-image-title">{{title}}</h6>
-  <h6 class="slack-image-text">{{text}}</h6>
-  </div>
-  <div class="learn-block">
-  <h5 class="learn-text">Learn more</h5>
-  <span class="slack-arrow"></span>
-  </div>
+<div class="features-grid-item flex-column gap-8 {{#if text}}grid-extrow{{/if}}">
+  <img src="{{img}}" alt="{{title}}">
+  <h5 class="features-grid-title">{{title}}</h5>
+  {{#if text}}            
+  <p class="features-grid-text">{{text}}</p>
+  {{/if}}
+  <img src="{{arrow}}" alt="arrow" class="slack-arrow">
 </div>

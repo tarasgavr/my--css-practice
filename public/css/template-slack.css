@@ -94,7 +94,9 @@
 		height: auto;
 	}
 	.slack-arrow {
-		background-image: url("../img/svg/arrow.svg");
+	position: absolute;
+	bottom: 10%;
+	right: 10%;
 	}
 }
 @layer variant {
@@ -147,7 +149,7 @@
 		display: flex;
 	}
 }
-.slack-header {
+.slack-header,.slack-footer {
 	background-color: var(--color-white);
 }
 .hero-container {
@@ -180,7 +182,7 @@
 	background-color: #f4ede4;
 }
 .features-container-main {
-	margin-bottom: 136px;
+	margin-bottom: 240px;
 	position: relative;
 }
 .features-block-main {
@@ -201,36 +203,55 @@
 }
 .gridMain {
 	position: absolute;
-	bottom: -88px;
+	bottom: -120px;
 }
 .features-grid-item {
+	align-items: baseline;
 	background-color: var(--color-white);
 	box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.10);
 	padding: 16px;
-}
-.features-grid-icon {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 150%;
+	position: relative;
 }
 .features-grid-title {
+	text-transform: capitalize;
 }
 .features-grid-text {
+	margin-right: 34px;
 }
 .features-container-secondary {
+	margin-bottom: 236px;
+	position: relative;
 }
 .features-block-secondary {
+	gap: 130px;
 }
 .features-block-header-secondary {
+	margin-top: 60px;
 }
 .gridSecondary {
+	margin-left: 330px;
+	position: absolute;
+	top: 60%;
 }
 /* {{!-- основна частина --}} */
 /* {{!-- підвал --}} */
-.slack-footer {
-}
 .delivero-container-main {
+	margin: 72px 0 48px 0;
 }
-.delivero-image-col {
+.delivero-block {
+	align-items: flex-start;
 }
 .delivero-quote {
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 150%;
+	letter-spacing:	-0.3px;
+}
+.delivero-quote::before, .delivero-quote::after {
+	content: '"';
 }
 .delivero-title {
 }
