@@ -65,8 +65,8 @@
 </main>
 {{!-- основна частина --}}
 {{!-- підвал --}}
-<footer class="slack-footer flex-justify-center">
-  <div class="flex-column">
+<footer class="slack-footer">
+  <div class='flex-justify-center'>
     <div class="center1020 flex-row gap-36 delivero-container-main">
       <div class="flex-column flex-justify-center">
         <img src="/img/jpg/img-deliveroo.jpg" alt="delivero image">
@@ -79,28 +79,27 @@
         <h6 class="delivero-title">Will Sprunt, CIO, Deliveroo</h6>
       </div>
     </div>
-  <div class="flex-column">
-    <div class="center1230 flex-row delivero-container-secondary">
-      <div class="flex-column gap-40">
+  </div>
+  <div class='flex-justify-center'>
+    <div class="center1230 flex-column gap-40">
         <h4 class="slack-text">Explore more about working in Slack</h4>
-        <div class="flex-row gap-80">
-          {{#each cards}}            
+        <div class="flex-row delivero-content">
+          {{#each cards}}          
             <div class="flex-column">
               <img src="{{img}}" alt="{{title}}" class="image">
-              <div class="flex-column slack-col">
-              <h6 class="slack-image-title">{{title}}</h6>
-              <h6 class="slack-image-text">{{text}}</h6>
+              <div class="flex-column gap-8 slack-col">
+                <h6 class="slack-image-title">{{title}}</h6>
+                <h6 class="slack-image-text">{{text}}</h6>
               </div>
-              <div class="learn-block">
+              <div class="flex-row learn-block">
               <h5 class="learn-text">Learn more</h5>
-              <span class="slack-arrow"></span>
+              <img src="/img/svg/arrow.svg" class="learn-arrow"></img>
               </div>
             </div>
           {{/each}} <!-- end of cards -->
         </div>
       </div>
     </div>
-  </div>
   </div>
 </footer>
 {{!-- підвал --}}
