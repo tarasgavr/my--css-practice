@@ -1134,16 +1134,19 @@ router.get('/template-slack', function (req, res) {
         img: "/img/jpg/slack-101.jpg",
         title: "Slack Tutorials",
         text: "Slack 101",
+        arrow: "/img/svg/arrowb.svg",
       },
       {
         img: "/img/png/slack-vs-email.png",
         title: "Slack vs. Email",
         text: "An easier, more organized way to work",
+        arrow: "/img/svg/arrowb.svg",
       },
       {
         img: "/img/png/fastly-shared-channels-wow-enterprise-customers.png",
         title: "Customer Stories",
         text: "How Fastly uses Slack Connect to wow enterprise customers",
+        arrow: "/img/svg/arrowb.svg",
       },
     ],
   })

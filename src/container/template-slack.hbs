@@ -85,17 +85,7 @@
         <h4 class="slack-text">Explore more about working in Slack</h4>
         <div class="flex-row delivero-content">
           {{#each cards}}          
-            <div class="flex-column">
-              <img src="{{img}}" alt="{{title}}" class="image">
-              <div class="flex-column gap-8 slack-col">
-                <h6 class="slack-image-title">{{title}}</h6>
-                <h6 class="slack-image-text">{{text}}</h6>
-              </div>
-              <div class="flex-row learn-block">
-              <h5 class="learn-text">Learn more</h5>
-              <img src="/img/svg/arrow.svg" class="learn-arrow"></img>
-              </div>
-            </div>
+            {{> slack-card img=img title=title text=text arrow=arrow }}
           {{/each}} <!-- end of cards -->
         </div>
       </div>

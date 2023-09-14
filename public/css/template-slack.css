@@ -98,6 +98,9 @@
 	bottom: 10%;
 	right: 10%;
 	}
+	.shadow {
+		box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.10);
+	}
 }
 @layer variant {
 	.gap-80 {
@@ -139,162 +142,159 @@
 		color: var(--color-button);
 	}
 }
-@layer component {
-	.flex-row {
-		display: flex;
+@layer main {
+	.slack-header,.slack-footer {
+		background-color: var(--color-white);
 	}
-}
-@layer component {
-	.flex-row {
-		display: flex;
+	.hero-container {
+		margin-top: 100px;
 	}
+	.hero-block {
+		padding: 0 68px 16px 0;
+		font-weight: 700;
+	}
+	.hero-block h6 {
+		font-size: 16px;
+	}
+	.hero-block h4 {
+		font-size: 48px;
+		line-height: 1;
+	}
+	.hero-text {
+		font-size: 19px;
+	}
+	.hero-brands {
+		padding: 12px 20px;
+		align-items: center;
+	}
+	.hero-brand {
+		height: min-content;
+	}
+	/* {{!-- шапка --}} */
+	/* {{!-- основна частина --}} */
+	.slack-main {
+		background-color: #f4ede4;
+	}
+	.features-container-main {
+		margin-bottom: 240px;
+		position: relative;
+	}
+	.features-block-main {
+		gap: 228px;
+	}
+	.features-block-header-main {
+		justify-content: center;
+		font-weight: 700;
+		line-height: 150%;
+		position: relative;
+	}
+	.features-title {
+		font-size: var(--size-md);
+		letter-spacing: -0.3px;
+	}
+	.features-text {
+		font-size: 18px;
+	}
+	.gridMain {
+		position: absolute;
+		bottom: -120px;
+	}
+	.features-grid-item {
+		align-items: baseline;
+		background-color: var(--color-white);
+		padding: 16px;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 150%;
+		position: relative;
+	}
+	.features-grid-title {
+		text-transform: capitalize;
+	}
+	.features-grid-text {
+		margin-right: 34px;
+	}
+	.features-container-secondary {
+		margin-bottom: 236px;
+		position: relative;
+	}
+	.features-block-secondary {
+		gap: 130px;
+	}
+	.features-block-header-secondary {
+		margin-top: 60px;
+	}
+	.gridSecondary {
+		margin-left: 330px;
+		position: absolute;
+		top: 60%;
+	}
+	/* {{!-- основна частина --}} */
+	/* {{!-- підвал --}} */
+	.delivero-container-main {
+		margin: 72px 0 48px 0;
+	}
+	.delivero-block {
+		align-items: flex-start;
+	}
+	.delivero-quote {
+		font-size: 28px;
+		font-weight: 700;
+		line-height: 150%;
+		letter-spacing:	-0.3px;
+	}
+	.delivero-quote::before, .delivero-quote::after {
+		content: '"';
+	}
+	.delivero-title {
+		font-size: 16px;
+	}
+	.delivero-content {
+		justify-content: space-around;
+	}
+	.delivero-container-secondary {
+		margin: 108px 0 80px 0;
+	}
+	.slack-text {
+		text-align: center;
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 118.75%;
+		letter-spacing: -0.3px;
+	}
+	.slack-cont {
+		padding: 8px 12px 16px;
+		width: 286px;
+	}
+	.slack-col {
+		padding-bottom: 16px;
+	}
+	.slack-image-title {
+		color: #454245;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 130%;
+		letter-spacing: 0.1px;
+	}
+	.slack-image-text {
+		font-size: var(--size-xd);
+		font-weight: 700;
+		line-height: 150%;
+	}
+	.learn-block {
+		justify-self: end;
+		justify-content: space-between;
+		color: #1264a3;
+	}
+	.learn-text {
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 112.5%;
+		letter-spacing: 0.8px;
+	}
+	.learn-arrow {
+	}
+	/* {{!-- підвал --}} */
 }
-.slack-header,.slack-footer {
-	background-color: var(--color-white);
+@layer responsive {
 }
-.hero-container {
-	margin-top: 100px;
-}
-.hero-block {
-	padding: 0 68px 16px 0;
-	font-weight: 700;
-}
-.hero-block h6 {
-	font-size: 16px;
-}
-.hero-block h4 {
-	font-size: 48px;
-	line-height: 1;
-}
-.hero-text {
-	font-size: 19px;
-}
-.hero-brands {
-	padding: 12px 20px;
-	align-items: center;
-}
-.hero-brand {
-	height: min-content;
-}
-/* {{!-- шапка --}} */
-/* {{!-- основна частина --}} */
-.slack-main {
-	background-color: #f4ede4;
-}
-.features-container-main {
-	margin-bottom: 240px;
-	position: relative;
-}
-.features-block-main {
-	gap: 228px;
-}
-.features-block-header-main {
-	justify-content: center;
-	font-weight: 700;
-	line-height: 150%;
-	position: relative;
-}
-.features-title {
-	font-size: var(--size-md);
-	letter-spacing: -0.3px;
-}
-.features-text {
-	font-size: 18px;
-}
-.gridMain {
-	position: absolute;
-	bottom: -120px;
-}
-.features-grid-item {
-	align-items: baseline;
-	background-color: var(--color-white);
-	box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.10);
-	padding: 16px;
-	font-size: 18px;
-	font-weight: 700;
-	line-height: 150%;
-	position: relative;
-}
-.features-grid-title {
-	text-transform: capitalize;
-}
-.features-grid-text {
-	margin-right: 34px;
-}
-.features-container-secondary {
-	margin-bottom: 236px;
-	position: relative;
-}
-.features-block-secondary {
-	gap: 130px;
-}
-.features-block-header-secondary {
-	margin-top: 60px;
-}
-.gridSecondary {
-	margin-left: 330px;
-	position: absolute;
-	top: 60%;
-}
-/* {{!-- основна частина --}} */
-/* {{!-- підвал --}} */
-.delivero-container-main {
-	margin: 72px 0 48px 0;
-}
-.delivero-block {
-	align-items: flex-start;
-}
-.delivero-quote {
-	font-size: 28px;
-	font-weight: 700;
-	line-height: 150%;
-	letter-spacing:	-0.3px;
-}
-.delivero-quote::before, .delivero-quote::after {
-	content: '"';
-}
-.delivero-title {
-	font-size: 16px;
-}
-.delivero-content {
-	justify-content: space-around;
-}
-.delivero-container-secondary {
-	margin: 108px 0 80px 0;
-}
-.slack-text {
-	text-align: center;
-	font-size: 32px;
-	font-weight: 700;
-	line-height: 118.75%;
-	letter-spacing: -0.3px;
-}
-.slack-col {
-	padding: 7px 12px 16px;
-	align-items: flex-start;
-}
-.slack-image-title {
-	color: #454245;
-	font-size: 14px;
-	font-weight: 700;
-	line-height: 130%;
-	letter-spacing: 0.1px;
-}
-.slack-image-text {
-	font-size: var(--size-xd);
-	font-weight: 700;
-	line-height: 150%;
-}
-.learn-block {
-	justify-content: space-between;
-	color: #1264a3;
-}
-.learn-text {
-	text-transform: uppercase;
-	font-size: 14px;
-	line-height: 112.5%;
-	letter-spacing: 0.8px;
-}
-.learn-arrow {
-}
-/* {{!-- підвал --}} */
