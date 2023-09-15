@@ -113,7 +113,7 @@ main {
 	line-height: 109.375%;
 	position: absolute;
 	left: 90%;
-	top: -100%;
+	bottom: 100%;
 }
 .message-block a {
 	align-self: flex-end;
