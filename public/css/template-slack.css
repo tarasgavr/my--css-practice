@@ -100,6 +100,7 @@
 	}
 	.shadow {
 		box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.10);
+		position: relative;
 	}
 }
 @layer variant {
@@ -291,8 +292,13 @@
 		font-size: 14px;
 		line-height: 112.5%;
 		letter-spacing: 0.8px;
+		position: absolute;
+		top: 95%;
 	}
 	.learn-arrow {
+	position: absolute;
+	top: 95%;
+	right: 5%;
 	}
 	/* {{!-- підвал --}} */
 }
