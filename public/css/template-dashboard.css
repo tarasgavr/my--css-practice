@@ -176,6 +176,12 @@
 	.bg-blue-icon {
 		background-color: var(--color-icon);
 	}
+	.bg-purple-card {
+		background-color: #5b39ad;
+	}
+	.bg-purple-icon {
+		background-color: #402b9c;
+	}
 	.bg-light-gray {
 		background-color: var(--color-light-gray);
 	}
@@ -226,7 +232,9 @@
 	}
 	/* {{!-- основна частина --}} */
 	.grid-wrapper {
+		margin-top: var(--space-9);
 		padding: var(--space-5);
+		border-radius: calc(var(--border-radius) * 4);
 	}
 	.card {
 		padding: var(--space-5);
