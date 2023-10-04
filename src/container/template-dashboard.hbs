@@ -29,20 +29,22 @@
     <div class="center1300 flex-column gap-40">
       <div class="grid-wrapper bg-white grid-col3-row2 gap-24">
         {{#each cards}}
-          <div class="{{#if big}}grid-extrow{{/if}} {{#if @first}}bg-purple-card{{/if}} {{#if @last}}bg-wite-card{{/if}} flex-column card">
-            <img src="{{img}}" alt="{{title}}" class="card-icon">
-            <div class="flex-column">
-              <h4 class="card-price">{{price}}</h4>
-              {{#if badge}}
-                <img src="{{badge}}" alt="badge" class="card-badge">
-              {{/if}}
-              <h4 class="card-title">{{title}}</h4>
-            </div>
+          <div class="{{#if big}}grid-extrow{{/if}} {{#if @first}}bg-purple-card{{else}}bg-blue-card{{/if}} flex-column card" {{#if big}}style="justify-content: space-between;"{{/if}}>
+              {{#unless big}}<div class="flex-row gap-12">{{/unless}}
+                <img src="{{img}}" alt="{{title}}" class="card-icon {{#if @first}}bg-purple-icon{{else}}bg-blue-icon{{/if}}" {{#if @last}}style="background-color: #fff8e3;"{{/if}}>
+                <div class="flex-column {{#if big}}gap-12{{else}}gap-8{{/if}}">
+                  <h4 class="card-price">{{price}}</h4>
+                  {{#if badge}}
+                    <img src="{{badge}}" alt="badge" class="card-badge">
+                  {{/if}}
+                  <h4 class="card-title">{{title}}</h4>
+                </div>
+              {{#unless big}}</div>{{/unless}}
           </div>
         {{/each}} <!-- end of cards -->
       </div>
-      <div class="listform-wrapper flex-row gap-40">
-        <div class="listform-wrapper flex-column gap-24">
+      <div class="flex-row gap-40">
+        <div class="bg-white flex-column gap-24">
           <h4 class="list-title">Purchase list</h4>
           {{#each list}}
             <hr class="divider" />
@@ -66,7 +68,7 @@
             </div>
           {{/each}} <!-- end of list -->
         </div>
-        <div class="flex-column gap-24">
+        <div class="bg-white flex-column gap-24">
           <h4 class='form-title'>Payment</h4>
           <hr class="divider" />
           <div class="flex-column gap-12">

@@ -10,7 +10,7 @@
 }
 @layer default {
 	:root {
-		--color-light-white: rgba(255,255,255,.25);
+		--color-light-white: #e0e4e8;
 		--color-white: #fff;
 		--color-light-black: #212529;
 		--color-black: #000;
@@ -169,6 +169,12 @@
 	}
 	.bg-white {
 		background-color: var(--color-white);
+		border-radius: calc(var(--border-radius) * 4);
+		padding: var(--space-5);
+	}
+	.bg-white-card {
+		background-color: var(--color-white);
+		border: 1px solid var(--color-light-white);
 	}
 	.bg-blue-card {
 		background-color: var(--color-card);
@@ -233,23 +239,36 @@
 	/* {{!-- основна частина --}} */
 	.grid-wrapper {
 		margin-top: var(--space-9);
-		padding: var(--space-5);
-		border-radius: calc(var(--border-radius) * 4);
 	}
 	.card {
 		padding: var(--space-5);
 		border-radius: calc(var(--border-radius) * 2);
 	}
-	.card-icon {
-		padding: var(--space-1);
+	.card:last-child {
+		background-color: var(--color-white);
+		border: 1px solid var(--color-light-white);
+	}
+	.card-price {
+		color: var(--color-white);
+		font-size: var(--size-md);
+		font-weight: 600;
+	}
+	.card-price:nth-child(3) {
+		font-size: 20px;
+	}
+	.card-price:nth-child(4) {
+		color: var(--color-black);
+		font-size: 20px;
+	}
+	.card-badge {
 		width: 28px;
 		height: 28px;
 	}
-	.card-price {
-	}
-	.card-badge {
-	}
 	.card-title {
+		color: rgba(255, 255, 252, .70);
+	}
+	.card-title:nth-child(4) {
+		color: var(--color-black);
 	}
 
 }
