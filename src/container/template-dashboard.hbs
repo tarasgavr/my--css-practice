@@ -31,13 +31,13 @@
         {{#each cards}}
           <div class="{{#if big}}grid-extrow{{/if}} {{#if @first}}bg-purple-card{{else}}bg-blue-card{{/if}} flex-column card" {{#if big}}style="justify-content: space-between;"{{/if}}>
               {{#unless big}}<div class="flex-row gap-12">{{/unless}}
-                <img src="{{img}}" alt="{{title}}" class="card-icon {{#if @first}}bg-purple-icon{{else}}bg-blue-icon{{/if}}" {{#if @last}}style="background-color: #fff8e3;"{{/if}}>
+                <img src="{{img}}" alt="{{title}}" class="card-icon {{#if @first}}bg-purple-icon{{else}}bg-blue-icon{{/if}} {{#unless big}}card-icon-small{{/unless}}" {{#if @last}}style="background-color: #fff8e3;"{{/if}}>
                 <div class="flex-column {{#if big}}gap-12{{else}}gap-8{{/if}}">
-                  <h4 class="card-price">{{price}}</h4>
+                  <h4 class="card-price" {{#if @last}}style="color: black; font-size: 20px"{{/if}}>{{price}}</h4>
                   {{#if badge}}
                     <img src="{{badge}}" alt="badge" class="card-badge">
                   {{/if}}
-                  <h4 class="card-title">{{title}}</h4>
+                  <div class="card-title" {{#if @last}}style="color: rgba(0,0,0,.7)"{{/if}}>{{title}}</div>
                 </div>
               {{#unless big}}</div>{{/unless}}
           </div>
@@ -45,7 +45,6 @@
       </div>
       <div class="flex-row gap-40">
         <div class="bg-white flex-column gap-24">
-          <h4 class="list-title">Purchase list</h4>
           {{#each list}}
             <hr class="divider" />
             <div class="grid-col4 gap-20">
