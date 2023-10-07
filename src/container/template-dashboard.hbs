@@ -33,7 +33,7 @@
               {{#unless big}}<div class="flex-row gap-12">{{/unless}}
                 <img src="{{img}}" alt="{{title}}" class="card-icon {{#if @first}}bg-purple-icon{{else}}bg-blue-icon{{/if}} {{#unless big}}card-icon-small{{/unless}}" {{#if @last}}style="background-color: #fff8e3;"{{/if}}>
                 <div class="flex-column {{#if big}}gap-12{{else}}gap-8{{/if}}">
-                  <h4 class="card-price" {{#unless big}}style="font-size: 20px"{{/unless}} {{#if @last}}style="color: black;"{{/if}}>{{price}}</h4>
+                  <div class="card-price" {{#unless big}}style="font-size: 20px;"{{/unless}}{{#if @last}}style="color: black"{{/if}}>{{price}}</div>
                   {{#if badge}}
                     <img src="{{badge}}" alt="badge" class="card-badge">
                   {{/if}}
@@ -45,6 +45,7 @@
       </div>
       <div class="flex-row gap-40">
         <div class="bg-white flex-column gap-24">
+          <h4>Purchase list</h4>
           {{#each list}}
             <hr class="divider" />
             <div class="grid-col4 gap-20">
@@ -68,19 +69,21 @@
           {{/each}} <!-- end of list -->
         </div>
         <div class="bg-white flex-column gap-24">
-          <h4 class='form-title'>Payment</h4>
+          <h4>Payment</h4>
           <hr class="divider" />
           <div class="flex-column gap-12">
             {{#each radios}}
-              <input type="radio" id="radio-{{id}}" name="pay-method" class="pay-with-radio">
-              <label class="pay-with-label" for="radio-{{id}}">{{label}}</label>
+              <label class="pay-with-label">
+                <input type="radio" name="pay-method" class="pay-with-radio">
+                {{label}}
+              </label>
             {{/each}} <!-- end of radios -->
           </div>
           <div class="grid-col2-row2 gap-24">
             {{#each inputs}}
             <div class="flex-column gap-8">
               <label class="card-info-label">{{this}}</label>
-              <input type="text" class="card-info-input">
+              <input type="text" class="input card-info-input">
             </div>
             {{/each}} <!-- end of inputs -->
           </div>
