@@ -73,13 +73,14 @@
           <hr class="divider" />
           <div class="flex-column gap-12">
             {{#each radios}}
-              <label class="pay-with-label">
-                <input type="radio" name="pay-method" class="pay-with-radio">
-                {{label}}
+              <label>
+                <input type="radio" checked class="pay-radio">
+                <div class="pay-radio-styled"></div>
+                <span class="pay-label">{{label}}</span>
               </label>
             {{/each}} <!-- end of radios -->
           </div>
-          <div class="grid-col2-row2 gap-24">
+          <div class="grid-col2 gap-24">
             {{#each inputs}}
             <div class="flex-column gap-8">
               <label class="card-info-label">{{this}}</label>
@@ -92,7 +93,8 @@
             {{#each selects}}
             <div class="flex-column gap-8">
               <label class="place-info-label">{{this}}</label>
-              <select class="place-info-select">
+              <select
+               class="place-info-select">
                 <option value="Choose..." selected></option>
                 <option value="USA"></option>
                 <option value="Ukraine"></option>
@@ -102,7 +104,9 @@
             {{/each}} <!-- end of selects -->
           </div>
           <hr class="divider" />
-          <input type="submit" value="Continue to checkout" class='form-submit'>
+          <a href="#" class="link-button pay-button">
+            <span class="text-white">Continue to checkout</span>
+          </a>
         </div>
       </div>
     </div>

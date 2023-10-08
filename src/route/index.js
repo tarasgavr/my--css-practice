@@ -1242,6 +1242,7 @@ router.get('/template-dashboard', function (req, res) {
       {
         label: 'Credit card',
         id: 1,
+        checked: true,
       },
       {
         label: 'Dedit card',
