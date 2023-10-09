@@ -74,7 +74,7 @@
           <div class="flex-column gap-12">
             {{#each radios}}
               <label>
-                <input type="radio" checked class="pay-radio">
+                <input type="radio" {{#if @first}}checked{{/if}} class="pay-radio">
                 <div class="pay-radio-styled"></div>
                 <span class="pay-label">{{label}}</span>
               </label>
