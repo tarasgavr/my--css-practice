@@ -43,8 +43,8 @@
           </div>
         {{/each}} <!-- end of cards -->
       </div>
-      <div class="flex-row gap-40">
-        <div class="bg-white flex-column gap-24">
+      <div class="flex-row gap-40 order-details-container">
+        <div class="bg-white flex-column gap-24 purchase-list-container">
           <h4>Purchase list</h4>
           {{#each list}}
             <hr class="divider" />
@@ -93,13 +93,16 @@
             {{#each selects}}
             <div class="flex-column gap-8">
               <label class="place-info-label">{{this}}</label>
-              <select
-               class="place-info-select">
-                <option value="Choose..." selected></option>
-                <option value="USA"></option>
-                <option value="Ukraine"></option>
-                <option value="Spain"></option>
-              </select>
+              <div class="input place-info-select">
+                <div class="select-text">Choose...</div>
+                <div class="select-arrow"></div>
+                <optgroup>
+                  <option selected>Choose...</option>
+                  <option value="USA">USA</option>
+                  <option value="Ukraine">Ukraine</option>
+                  <option value="Spain">Spain</option>
+                </optgroup>
+              </div>
             </div>
             {{/each}} <!-- end of selects -->
           </div>
