@@ -33,7 +33,7 @@
               {{#unless big}}<div class="flex-row gap-12">{{/unless}}
                 <img src="{{img}}" alt="{{title}}" class="card-icon {{#if @first}}bg-purple-icon{{else}}bg-blue-icon{{/if}} {{#unless big}}card-icon-small{{/unless}}" {{#if @last}}style="background-color: #fff8e3;"{{/if}}>
                 <div class="flex-column {{#if big}}gap-12{{else}}gap-8{{/if}}">
-                  <div class="card-price" {{#unless big}}style="font-size: 20px;"{{/unless}}{{#if @last}}style="color: black"{{/if}}>{{price}}</div>
+                  <div class="card-price" {{#unless big}}style="font-size: 20px;"{{/unless}}{{#if @last}}style="color: black"{{/if}} {{#if @first}}style="position: relative"{{/if}}>{{price}}</div>
                   {{#if badge}}
                     <img src="{{badge}}" alt="badge" class="card-badge">
                   {{/if}}
@@ -93,15 +93,17 @@
             {{#each selects}}
             <div class="flex-column gap-8">
               <label class="place-info-label">{{this}}</label>
-              <div class="input place-info-select">
-                <div class="select-text">Choose...</div>
-                <div class="select-arrow"></div>
-                <optgroup>
-                  <option selected>Choose...</option>
+              <div style="position: relative;">
+                <div class="input place-info-select">
+                  <div class="select-text">Choose...</div>
+                  <div class="select-arrow"></div>
+                </div>
+                <select class="my-select">
                   <option value="USA">USA</option>
                   <option value="Ukraine">Ukraine</option>
+                  <option value="India">India</option>
                   <option value="Spain">Spain</option>
-                </optgroup>
+                </select>
               </div>
             </div>
             {{/each}} <!-- end of selects -->
