@@ -125,6 +125,9 @@
 		width: 28px;
 		height: 28px;
 	}
+	.big-card {
+		justify-content: space-between;
+	}
 	.divider {
 		background-color: var(--color-light-white);
 	}
@@ -241,7 +244,7 @@
 		left: 208px;
 		top: calc(50% - (28px / 2));
 	}
-	.form-sign:nth-child(1),.form-sign:nth-child(3) {
+	.form-sign:nth-child(1),.form-sign:nth-child(3),.card-icon:nth-child(4) {
 		background-color: #fff8e3;
 	}
 	.form-sign:nth-child(2) {
@@ -327,7 +330,6 @@
 		justify-content: space-between;
 	}
 	.place-info-select:hover {
-		cursor: pointer;
 	}
 	.select-text {
 		color: var(--color-light-black);
@@ -342,9 +344,10 @@
 	.my-select {
 		position: absolute;
 		top: 0;
-		left: 0;
+		left: 10%;
 		opacity: 0;
-		width: 100%;
+		width: 90%;
+		cursor: pointer;
 	}
 	.place-info-select:hover + .select-arrow {
 		border-right: 1px solid #000;
