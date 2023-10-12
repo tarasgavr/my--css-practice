@@ -56,13 +56,11 @@
 		display: flex;
 		justify-content: center;
 	}
-	.center1230 {
-		max-width: 1230px;
-		width: 100%;
+	.align-center {
+		align-items: center;
 	}
-	.center1000 {
-		max-width: 1000px;
-		width: 100%;
+	.pos-relative {
+		position: relative;
 	}
 	.center1300 {
 		max-width: 1300px;
@@ -270,21 +268,27 @@
 		font-size: var(--size-md);
 		font-weight: 600;
 	}
-	.card-price:last-child {
+	.card-price-black {
 		color: var(--color-black);
+	}
+	.card-price-small {
+		font-size: 20px;
 	}
 	.card-price::before {
 		content: '$';
 	}
 	.card-badge {
-		width: 28px;
-		height: 28px;
+		width: 20px;
+		height: 20px;
 		position: absolute;
-		left: 31.7%;
+		left: 35%;
 		top: 5%;
 	}
 	.card-title {
 		color: rgba(255, 255, 252, .70);
+	}
+	.card-title-black {
+		color: rgba(0, 0, 0, .7);
 	}
 	.order-details-container {
 		align-items: flex-start;
@@ -329,8 +333,6 @@
 		display: flex;
 		justify-content: space-between;
 	}
-	.place-info-select:hover {
-	}
 	.select-text {
 		color: var(--color-light-black);
 	}
@@ -343,16 +345,11 @@
 	}
 	.my-select {
 		position: absolute;
-		top: 0;
-		left: 10%;
+		top: 25px;
+		left: 0;
 		opacity: 0;
-		width: 90%;
+		width: 100%;
 		cursor: pointer;
-	}
-	.place-info-select:hover + .select-arrow {
-		border-right: 1px solid #000;
-		border-top: 1px solid #000;
-		transform: rotate(-45deg);
 	}
 }
 @layer responsive {
