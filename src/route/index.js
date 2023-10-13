@@ -1152,5 +1152,118 @@ router.get('/template-slack', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+// ================================================================
+router.get('/template-dashboard', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('template-dashboard', {
+    layout: 'template-dashboard',
+    page: {
+      title: "Template Dashboard"
+    },
+    links: [
+      {
+        img: "/img/svg/home.svg",
+        title: "home",
+      },
+      {
+        img: "/img/svg/orders.svg",
+        title: "orders",
+      },
+      {
+        img: "/img/svg/products.svg",
+        title: "products",
+      },
+    ],
+    signs: [
+      {
+        img: "/img/svg/iconoir_antenna-signal.svg",
+        title: "antenna",
+      },
+      {
+        img: "/img/svg/material-symbols_translate.svg",
+        title: "translate",
+      },
+      {
+        img: "/img/svg/tabler_bell.svg",
+        title: "bell",
+      },
+    ],
+    cards: [
+      {
+        img: "/img/svg/ph_money.svg",
+        price: "500.00",
+        badge: "/img/svg/arrow_badge.svg",
+        big: true,
+        title: "Total earning",
+      },
+      {
+        img: "/img/svg/material-symbols_shopping-bag-outline.svg",
+        big: true,
+        price: 961,
+        title: "Total order",
+      },
+      {
+        img: "/img/svg/ph_money.svg",
+        price: "203K",
+        title: "Total income",
+      },
+      {
+        img: "/img/svg/iconoir_shop.svg",
+        price: "203K",
+        title: "Total income",
+      },
+    ],
+    list: [
+      {
+        order_id: "ID437661",
+        product_title: "AirOn ProCam",
+        price: "132.32 EUR",
+        user_role: "Customer",
+        order_date: "May 11, 2023, 14:21",
+        product_type: "7/8 USB Type-C",
+        order_status: "Not paid",
+        user_email: "robin@com.de",
+      },
+      {
+        order_id: "ID437661",
+        product_title: "PHILIPS Essential",
+        price: "543 USD",
+        user_role: "Customer",
+        order_date: "May 11, 2023, 14:21",
+        product_type: "HD9200/90",
+        order_status: "Pay by STRIPE",
+        paid: true,
+        user_email: "dima@com.ua",
+      },
+    ],
+    radios: [
+      {
+        label: 'Credit card',
+        id: 1,
+      },
+      {
+        label: 'Dedit card',
+        id: 2,
+      },
+      {
+        label: 'PayPal',
+        id: 3,
+      },
+    ],
+    inputs: [
+      'Name on card',
+      'Credit card number',
+      'Expiration',
+      'CVV',
+    ],
+    selects: [
+      'Country',
+      'State',
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 // Підключаємо роутер до бек-енду
 module.exports = router

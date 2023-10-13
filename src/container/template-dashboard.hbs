@@ -1,0 +1,121 @@
+<div class="grid-col2-row2">
+  <aside class="aside grid-extrow flex-column gap-24">
+    <h2 class="aside-text text-white">Sidebar</h2>
+    <hr class="divider" />
+    <div class="flex-column gap-12">
+      {{#each links}}
+        <a href="#" class="link-button aside-button">
+          <img src="{{img}}" alt="{{title}}">
+          <span class="text-white">{{title}}</span>
+        </a>
+      {{/each}} <!-- end of links -->
+    </div>
+  </aside>
+  <header class="bg-white header flex-justify-center">
+    <div class="center1300 header-form">
+      <div class="flex-row pos-relative">       
+        <input type="text" placeholder="Search" class="input form-input">
+        <img src="/img/svg/ic_baseline-search.svg" alt="search" class="header-icon search-icon">
+        <img src="/img/svg/mingcute_settings-6-line.svg" alt="settings" class="header-icon settings-icon bg-blue-icon">
+      </div>
+      <div class="flex-row gap-20 align-center">
+        {{#each signs}}
+          <img src="{{img}}" alt="{{title}}" class="header-icon form-sign">
+        {{/each}} <!-- end of signs -->
+      </div>
+    </div>
+  </header>
+  <main class="main bg-light-gray flex-justify-center">
+    <div class="center1300 flex-column gap-40">
+      <div class="grid-wrapper bg-white grid-col3-row2 gap-24">
+        {{#each cards}}
+          <div class="flex-column card {{#if big}}grid-extrow big-card{{/if}} {{#unless @last}}{{#if @first}}bg-purple-card{{else}}bg-blue-card{{/if}}{{/unless}}">
+              {{#unless big}}<div class="flex-row gap-12">{{/unless}}
+                <img src="{{img}}" alt="{{title}}" class="card-icon {{#unless @last}}{{#if @first}}bg-purple-icon{{else}}bg-blue-icon{{/if}}{{/unless}} {{#unless big}}card-icon-small{{/unless}}">
+                <div class="flex-column {{#if big}}gap-12{{else}}gap-8{{/if}}">
+                  <div class="card-price {{#unless big}}card-price-small{{/unless}} {{#if @last}}card-price-black{{/if}} {{#if @first}}pos-relative{{/if}}">{{price}}
+                    {{#if badge}}
+                      <img src="{{badge}}" alt="badge" class="card-badge">
+                    {{/if}}
+                  </div>
+                  <div class="card-title {{#if @last}}
+                  card-title-black{{/if}}">{{title}}</div>
+                </div>
+              {{#unless big}}</div>{{/unless}}
+          </div>
+        {{/each}} <!-- end of cards -->
+      </div>
+      <div class="flex-row gap-40 order-details-container">
+        <div class="bg-white flex-column gap-24 purchase-list-container">
+          <h4>Purchase list</h4>
+          {{#each list}}
+            <hr class="divider" />
+            <div class="grid-col4 gap-20">
+              <div class="flex-column gap-12">
+                <div>{{order_id}}</div>
+                <time>{{order_date}}</time>
+              </div>
+              <div class="flex-column gap-12">
+                <div>{{product_title}}</div>
+                <div>{{product_type}}</div>
+              </div>
+              <div class="flex-column gap-12">
+                <div>{{price}}</div>
+                <div class="{{#if paid}}clgreen{{else}}clred{{/if}}">{{order_status}}</div>
+              </div>
+              <div class="flex-column gap-12">
+                <div>{{user_role}}</div>
+                <div>{{user_email}}</div>
+              </div>
+            </div>
+          {{/each}} <!-- end of list -->
+        </div>
+        <div class="bg-white flex-column gap-24">
+          <h4>Payment</h4>
+          <hr class="divider" />
+          <div class="flex-column gap-12">
+            {{#each radios}}
+              <label>
+                <input type="radio" {{#if @first}}checked{{/if}} class="pay-radio">
+                <div class="pay-radio-styled"></div>
+                <span class="pay-label">{{label}}</span>
+              </label>
+            {{/each}} <!-- end of radios -->
+          </div>
+          <div class="grid-col2 gap-24">
+            {{#each inputs}}
+            <div class="flex-column gap-8">
+              <label class="card-info-label">{{this}}</label>
+              <input type="text" class="input card-info-input">
+            </div>
+            {{/each}} <!-- end of inputs -->
+          </div>
+          <hr class="divider" />
+          <div class="grid-col2 gap-24">
+            {{#each selects}}
+            <div class="flex-column gap-8">
+              <label class="place-info-label">{{this}}</label>
+              <div class="pos-relative">
+                <div class="input place-info-select">
+                  <div class="select-text">Choose...</div>
+                  <div class="select-arrow"></div>
+                </div>
+                <select class="my-select">
+                  <option value="USA">USA</option>
+                  <option value="Ukraine">Ukraine</option>
+                  <option value="India">India</option>
+                  <option value="Spain">Spain</option>
+                </select>
+              </div>
+            </div>
+            {{/each}} <!-- end of selects -->
+          </div>
+          <hr class="divider" />
+          <a href="#" class="link-button pay-button">
+            <span class="text-white">Continue to checkout</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
