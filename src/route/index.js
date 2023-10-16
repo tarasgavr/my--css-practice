@@ -1276,7 +1276,8 @@ router.get('/template-apple', function (req, res) {
   // ↙️ cюди вводимо назву файлу з сontainer
   res.render('template-apple', {
     // вказуємо назву папки контейнера, в якій знаходяться наші стилі
-    layout: 'template-apple',
+    style: 'template-apple',
+    layout: 'template-apple/index',
     page: {
       title: "Template Apple"
     },
