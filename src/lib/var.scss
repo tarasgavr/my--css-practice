@@ -4,3 +4,10 @@ $colorMap: (
 @function color($key) {
   @return map-get($colorMap,$key);
 }
+
+$fontSizeMap: (
+  default: 16px,
+);
+@function font($key: 'default') {
+  @return map-get($fontSizeMap,$key);
+}
