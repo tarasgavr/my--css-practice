@@ -1,13 +1,28 @@
-{{! 
-Це код container файлу для index сторінки, 
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
- }}
-
-<div >
-  Hello world!
-</div>
-
-{{! 
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
-}}
+<header>
+  <div class="headerdark flex-justify-center">
+    <div class="headerrow center1200">
+      {{#with header}}
+        <div class="headermenu">
+          <img src="/img/svg/apple-sign.svg" alt="Apple" class="header-icon">
+          {{#each links}}
+            <a href="{{url}}" class="header-link">{{text}}</a>
+          {{/each}}
+        </div>
+        <div class="header-signs">
+          <img src="/img/svg/search.svg" alt="Search" class="header-icon search-icon">
+          <img src="/img/svg/apple-bag.svg" alt="Bag" class="header-icon">
+        </div>
+    </div>
+  </div>
+  <div class="headerlight flex-justify-center">
+    <div class="headerrow center1200">
+      {{#with ad}}
+        <div class="header-title">{{title}}</div>
+          {{#with link}}
+            <a href="{{url}}" class="header-blue-link">{{text}}</a>
+          {{/with}}
+      {{/with}}
+      {{/with}}
+    </div>
+  </div>
+</header>

@@ -1,3 +1,6 @@
 @function space($num) {
-  @return $num * 4px;
+  @return $num * 0.25rem;
+}
+@function size($num) {
+  @return $num * 0.125rem;
 }

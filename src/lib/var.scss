@@ -1,5 +1,5 @@
 $colorMap: (
-  white: rgba(255,255,255,1),
+  background-white: rgba(255,255,255,1),
   light-white: rgba(245,245,247,1),
   dark-white: rgba(218,218,218,1),
   transparent-white: rgba(255,255,255,0.8),
@@ -26,3 +26,15 @@ $fontSizeMap: (
 @function font($key: 'default') {
   @return map-get($fontSizeMap,$key);
 }
+$screenMap: (
+  desctop: 1440px,
+  laptop: 1024px,
+  tablet: 768px,
+  mobile: 320px,
+);
+$contentSizeMap: (
+  desctop: 1440px,
+  laptop: 1024px,
+  tablet: 768px,
+  mobile: 320px,
+);

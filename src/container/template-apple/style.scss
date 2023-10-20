@@ -1,0 +1,38 @@
+@use '../../lib/service.scss' as s;
+
+.headerdark {
+  background-color: s.color('light-gray');
+}
+.headerrow {
+  display: flex;
+  justify-content: space-between;
+}
+.headermenu {
+  display: flex;
+  align-items: center;
+}
+.header-icon {
+  width: s.size(7);
+  height: s.size(22);
+}
+.search-icon {
+  color: s.color('dark-white');
+}
+.header-link {
+  margin-left: s.space(7);
+  font-size: s.font('menu-text-sm');
+  color: s.color('dark-white');
+}
+.header-signs {
+  display: flex;
+  gap: s.space(7);
+}
+.headerlight {
+  background-color: s.color('dark-white');
+  padding: s.space(3) 0;
+}
+.header-title {
+  font-size: s.font('menu-text');
+  color: s.color('dark-black');
+  line-height: 147.059%;
+}
