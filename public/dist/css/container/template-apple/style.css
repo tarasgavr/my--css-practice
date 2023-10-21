@@ -1,5 +1,5 @@
 .headerdark {
-  background-color: rgb(66, 66, 69);
+  background-color: rgb(69, 69, 69);
 }
 
 .headerrow {
@@ -15,16 +15,28 @@
 .header-icon {
   width: 0.875rem;
   height: 2.75rem;
+  transition: opacity 0.7s;
+  cursor: pointer;
 }
-
-.search-icon {
-  color: rgb(218, 218, 218);
+.header-icon:hover {
+  opacity: 0.7;
+}
+.header-icon:active {
+  opacity: 0.3;
 }
 
 .header-link {
   margin-left: 1.75rem;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: rgb(218, 218, 218);
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.header-link:hover {
+  opacity: 0.7;
+}
+.header-link:active {
+  opacity: 0.3;
 }
 
 .header-signs {
@@ -38,9 +50,28 @@
 }
 
 .header-title {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: rgb(0, 0, 0);
   line-height: 147.059%;
+}
+
+.header-blue-link::after {
+  content: ">";
+  margin-left: 0.5rem;
+}
+
+.header-blue-link {
+  font-size: 0.875rem;
+  color: rgb(0, 102, 204);
+  line-height: 147.059%;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.header-blue-link:hover {
+  opacity: 0.7;
+}
+.header-blue-link:active {
+  opacity: 0.3;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -15,13 +15,13 @@ $colorMap: (
 }
 
 $fontSizeMap: (
-  menu-text-sm: 12px,
-  menu-text: 14px,
-  default: 16px,
-  card-text-sm: 20px,
-  card-text: 28px,
-  card-title-sm: 40px,
-  card-title: 56px,
+  menu-text-sm: 0.75rem,
+  menu-text: 0.875rem,
+  default: 1rem,
+  card-text-sm: 1.25rem,
+  card-text: 1.75rem,
+  card-title-sm: 2.5rem,
+  card-title: 3.5rem,
 );
 @function font($key: 'default') {
   @return map-get($fontSizeMap,$key);

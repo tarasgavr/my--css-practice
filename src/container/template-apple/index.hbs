@@ -1,5 +1,5 @@
 <header>
-  <div class="headerdark flex-justify-center">
+  <section class="headerdark flex-justify-center">
     <div class="headerrow center1200">
       {{#with header}}
         <div class="headermenu">
@@ -9,12 +9,12 @@
           {{/each}}
         </div>
         <div class="header-signs">
-          <img src="/img/svg/search.svg" alt="Search" class="header-icon search-icon">
+          <img src="/img/svg/apple-search.svg" alt="Search" class="header-icon search-icon">
           <img src="/img/svg/apple-bag.svg" alt="Bag" class="header-icon">
         </div>
     </div>
-  </div>
-  <div class="headerlight flex-justify-center">
+  </section>
+  <section class="headerlight flex-justify-center">
     <div class="headerrow center1200">
       {{#with ad}}
         <div class="header-title">{{title}}</div>
@@ -24,5 +24,23 @@
       {{/with}}
       {{/with}}
     </div>
-  </div>
+  </section>
 </header>
+<main>
+  <section class="iphone14pro flex-justify-center">
+    <div class="product-info center1200">
+      {{#with iphone_pro}}
+        <h4 class="product-title">{{title}}</h4>
+        <div class="product-description">{{descriptions}}</div>
+        {{#with link}}
+          {{#each text}}
+            <a href="{{link}}" class="product-link">{{this}}</a>
+          {{/each}}
+        {{/with}}
+      {{/with}}
+    </div>
+  </section>
+</main>
+<footer>
+
+</footer>
