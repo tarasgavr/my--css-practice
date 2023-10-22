@@ -55,7 +55,7 @@
   line-height: 147.059%;
 }
 
-.header-blue-link::after {
+.header-blue-link::after, .product-link::after {
   content: ">";
   margin-left: 0.5rem;
 }
@@ -72,6 +72,35 @@
 }
 .header-blue-link:active {
   opacity: 0.3;
+}
+
+.product-info {
+  display: grid;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 5rem 0;
+}
+
+.product-title {
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.product-description {
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.product-links {
+  display: flex;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.product-link {
+  font-size: 0.875rem;
+  color: rgb(41, 151, 255);
 }
 
 /*# sourceMappingURL=style.css.map */

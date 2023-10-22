@@ -35,13 +35,37 @@
   color: s.color('dark-black');
   line-height: 147.059%;
 }
-.header-blue-link::after {
+.header-blue-link::after, .product-link::after {
   content: '>';
   margin-left: s.space(2);
 }
 .header-blue-link {
   font-size: s.font('menu-text');
   color: s.color('dark-blue');
-  line-height: 147.059%; 
+  line-height: 147.059%;
   @include s.click;
+}
+.product-info {
+  display: grid;
+  justify-content: center;
+  align-items: flex-start;
+  gap: s.space(5);
+  padding: s.space(20) 0;
+}
+.product-title {
+  font-size: s.font('card-title');  
+  text-align: center;
+}
+.product-description {
+  font-size: s.font('card-text');
+  text-align: center; 
+}
+.product-links {
+  display: flex;
+  gap: s.space(5);
+  text-align: center;
+}
+.product-link {
+  font-size: s.font('menu-text');
+  color: s.color('light-blue');
 }

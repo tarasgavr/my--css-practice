@@ -27,15 +27,17 @@
   </section>
 </header>
 <main>
-  <section class="iphone14pro flex-justify-center">
+  <section class="product-iphonepro flex-justify-center">
     <div class="product-info center1200">
       {{#with iphone_pro}}
         <h4 class="product-title">{{title}}</h4>
         <div class="product-description">{{descriptions}}</div>
         {{#with link}}
-          {{#each text}}
-            <a href="{{link}}" class="product-link">{{this}}</a>
-          {{/each}}
+          <div class="product-links">
+            {{#each text}}
+              <a href="{{../link}}" class="product-link">{{this}}</a>
+            {{/each}}
+          </div>
         {{/with}}
       {{/with}}
     </div>
