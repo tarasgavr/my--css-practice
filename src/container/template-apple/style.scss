@@ -45,10 +45,25 @@
   line-height: 147.059%;
   @include s.click;
 }
+@each $class, $url in s.$productImage {
+  .product-#{$class} {
+    background-image: url(#{$url});
+    background-size: cover;
+    background-position: bottom center;
+    height: 100vh;
+  }
+}
+.product-big {
+  max-height: 700px;
+}
+.product-big:nth-child(odd) {
+  color: s.color('background-white');
+}
 .product-info {
-  display: grid;
-  justify-content: center;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   gap: s.space(5);
   padding: s.space(20) 0;
 }
@@ -63,7 +78,7 @@
 .product-links {
   display: flex;
   gap: s.space(5);
-  text-align: center;
+  justify-content: center;
 }
 .product-link {
   font-size: s.font('menu-text');

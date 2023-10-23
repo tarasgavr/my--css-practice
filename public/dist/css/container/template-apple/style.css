@@ -74,10 +74,82 @@
   opacity: 0.3;
 }
 
+.product-iphonepro {
+  background-image: url(/img/png/iphone14pro.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-iphone {
+  background-image: url(/img/png/iphone14.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-apple-watch {
+  background-image: url(/img/png/apple-watch.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-apple-compare {
+  background-image: url(/img/png/apple-compare.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-apple-wwwdc3 {
+  background-image: url(/img/png/apple-wwwdc3.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-apple-macbook {
+  background-image: url(/img/png/apple-macbook.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-apple-meet {
+  background-image: url(/img/png/apple-meet.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-apple-airpods {
+  background-image: url(/img/png/apple-airpods.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-apple-card {
+  background-image: url(/img/png/apple-card.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-big {
+  max-height: 700px;
+}
+
+.product-big:nth-child(odd) {
+  color: rgb(255, 255, 255);
+}
+
 .product-info {
-  display: grid;
-  justify-content: center;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   gap: 1.25rem;
   padding: 5rem 0;
 }
@@ -95,7 +167,7 @@
 .product-links {
   display: flex;
   gap: 1.25rem;
-  text-align: center;
+  justify-content: center;
 }
 
 .product-link {
