@@ -45,6 +45,11 @@
   line-height: 147.059%;
   @include s.click;
 }
+.apple-grid {
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(2,1fr);
+}
 @each $class, $url in s.$productImage {
   .product-#{$class} {
     background-image: url(#{$url});
@@ -55,8 +60,16 @@
 }
 .product-big {
   max-height: 700px;
+  padding: s.space(20) 0;
 }
 .product-big:nth-child(odd) {
+  color: s.color('background-white');
+}
+.product-small {
+  max-height: 580px;
+  padding: s.space(12.5) 0;
+}
+.product-small:nth-child(even):not(:last-child) {
   color: s.color('background-white');
 }
 .product-info {
@@ -65,7 +78,9 @@
   justify-content: flex-start;
   align-items: center;
   gap: s.space(5);
-  padding: s.space(20) 0;
+}
+.product-info:nth-child(5) {
+  justify-content: flex-end;
 }
 .product-title {
   font-size: s.font('card-title');  
@@ -73,7 +88,15 @@
 }
 .product-description {
   font-size: s.font('card-text');
-  text-align: center; 
+  text-align: center;
+}
+.apple-grid .product-title {
+  font-size: s.font('card-title-sm');  
+  text-align: center;
+}
+.apple-grid .product-description {
+  font-size: s.font('card-text-sm');
+  text-align: center;
 }
 .product-links {
   display: flex;

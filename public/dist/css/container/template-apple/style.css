@@ -74,6 +74,12 @@
   opacity: 0.3;
 }
 
+.apple-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .product-iphonepro {
   background-image: url(/img/png/iphone14pro.png);
   background-size: cover;
@@ -139,9 +145,19 @@
 
 .product-big {
   max-height: 700px;
+  padding: 5rem 0;
 }
 
 .product-big:nth-child(odd) {
+  color: rgb(255, 255, 255);
+}
+
+.product-small {
+  max-height: 580px;
+  padding: 3.125rem 0;
+}
+
+.product-small:nth-child(even):not(:last-child) {
   color: rgb(255, 255, 255);
 }
 
@@ -151,7 +167,10 @@
   justify-content: flex-start;
   align-items: center;
   gap: 1.25rem;
-  padding: 5rem 0;
+}
+
+.product-info:nth-child(5) {
+  justify-content: flex-end;
 }
 
 .product-title {
@@ -161,6 +180,16 @@
 
 .product-description {
   font-size: 1.75rem;
+  text-align: center;
+}
+
+.apple-grid .product-title {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.apple-grid .product-description {
+  font-size: 1.25rem;
   text-align: center;
 }
 

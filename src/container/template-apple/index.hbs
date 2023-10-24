@@ -27,7 +27,7 @@
   </section>
 </header>
 <main>
-  <div class="product-iphonepro product-big flex-justify-center">
+  <section class="product-iphonepro product-big flex-justify-center">
     <div class="product-info center1200">
       {{#with iphone_pro}}
         <h4 class="product-title">{{title}}</h4>
@@ -41,8 +41,8 @@
         {{/with}}
       {{/with}}
     </div>
-  </div>
-  <div class="product-iphone product-big flex-justify-center">
+  </section>
+  <section class="product-iphone product-big flex-justify-center">
     <div class="product-info center1200">
       {{#with iphone}}
         <h4 class="product-title">{{title}}</h4>
@@ -56,8 +56,8 @@
         {{/with}}
       {{/with}}
     </div>
-  </div>
-  <div class="product-apple-watch product-big flex-justify-center">
+  </section>
+  <section class="product-apple-watch product-big flex-justify-center">
     <div class="product-info center1200">
       {{#with iwatch}}
         <h4 class="product-title">{{title}}</h4>
@@ -71,96 +71,78 @@
         {{/with}}
       {{/with}}
     </div>
-  </div>
-  <div class="product-apple-compare product-big flex-justify-center">
-    <div class="product-info center1200">
-      {{#with trade_in}}
-        <h4 class="product-title">{{title}}</h4>
-        <div class="product-description">{{descriptions}}</div>
-        {{#with link}}
-          <div class="product-links">
-            {{#each text}}
-              <a href="{{../link}}" class="product-link">{{this}}</a>
-            {{/each}}
-          </div>
+  </section>
+  <div class="apple-grid">
+    <section class="product-apple-compare product-small flex-justify-center">
+      <div class="product-info center1200">
+        {{#with trade_in}}
+          <h4 class="product-title">{{title}}</h4>
+          <div class="product-description">{{descriptions}}</div>
+          {{#with link}}
+            <a href="{{link}}" class="product-link">{{text}}</a>
+          {{/with}}
         {{/with}}
-      {{/with}}
-    </div>
-  </div>
-  <div class="product-apple-wwwdc3 product-big flex-justify-center">
-    <div class="product-info center1200">
-      {{#with conference}}
-        <h4 class="product-title">{{title}}</h4>
-        <div class="product-description">{{descriptions}}</div>
-        {{#with link}}
-          <div class="product-links">
-            {{#each text}}
-              <a href="{{../link}}" class="product-link">{{this}}</a>
-            {{/each}}
-          </div>
+      </div>
+    </section>
+    <section class="product-apple-wwwdc3 product-small flex-justify-center">
+      <div class="product-info center1200">
+        {{#with conference}}
+          <h4 class="product-title">{{title}}</h4>
+          <div class="product-description">{{descriptions}}</div>
+          {{#with link}}
+              <a href="{{link}}" class="product-link">{{text}}</a>
+          {{/with}}
         {{/with}}
-      {{/with}}
-    </div>
-  </div>
-  <div class="product-apple-macbook product-big flex-justify-center">
-    <div class="product-info center1200">
-      {{#with ipad}}
-        <h4 class="product-title">{{title}}</h4>
-        <div class="product-description">{{descriptions}}</div>
-        {{#with link}}
-          <div class="product-links">
-            {{#each text}}
-              <a href="{{../link}}" class="product-link">{{this}}</a>
-            {{/each}}
-          </div>
+      </div>
+    </section>
+    <section class="product-apple-macbook product-small flex-justify-center">
+      <div class="product-info center1200">
+        {{#with ipad}}
+          <h4 class="product-title">{{title}}</h4>
+          <div class="product-description">{{descriptions}}</div>
+          {{#with link}}
+            <div class="product-links">
+              {{#each text}}
+                <a href="{{../link}}" class="product-link">{{this}}</a>
+              {{/each}}
+            </div>
+          {{/with}}
         {{/with}}
-      {{/with}}
-    </div>
-  </div>
-  <div class="product-apple-meet product-big flex-justify-center">
-    <div class="product-info center1200">
-      {{#with iphone_pro}}
-        <h4 class="product-title">{{title}}</h4>
-        <div class="product-description">{{descriptions}}</div>
-        {{#with link}}
-          <div class="product-links">
-            {{#each text}}
-              <a href="{{../link}}" class="product-link">{{this}}</a>
-            {{/each}}
-          </div>
+      </div>
+    </section>
+    <section class="product-apple-meet product-small flex-justify-center">
+      <div class="product-info center1200">
+        {{#with small_business}}
+          <h4 class="product-title">{{title}}</h4>
+          <div class="product-description">{{descriptions}}</div>
+          {{#with link}}
+              <a href="{{link}}" class="product-link">{{text}}</a>
+          {{/with}}
         {{/with}}
-      {{/with}}
-    </div>
-  </div>
-  <div class="product-apple-airpods product-big flex-justify-center">
-    <div class="product-info center1200">
-      {{#with iphone}}
-        <h4 class="product-title">{{title}}</h4>
-        <div class="product-description">{{descriptions}}</div>
-        {{#with link}}
-          <div class="product-links">
-            {{#each text}}
-              <a href="{{../link}}" class="product-link">{{this}}</a>
-            {{/each}}
-          </div>
+      </div>
+    </section>
+    <section class="product-apple-airpods product-small flex-justify-center">
+      <div class="product-info center1200">
+        {{#with gift}}
+          <h4 class="product-title">{{title}}</h4>
+          <div class="product-description">{{descriptions}}</div>
+          {{#with link}}
+              <a href="{{link}}" class="product-link">{{text}}</a>
+          {{/with}}
         {{/with}}
-      {{/with}}
-    </div>
-  </div>
-  <div class="product-apple-card product-big flex-justify-center">
-    <div class="product-info center1200">
-      {{#with iwatch}}
-        <h4 class="product-title">{{title}}</h4>
-        <div class="product-description">{{descriptions}}</div>
-        {{#with link}}
-          <div class="product-links">
-            {{#each text}}
-              <a href="{{../link}}" class="product-link">{{this}}</a>
-            {{/each}}
-          </div>
+      </div>
+    </section>
+    <section class="product-apple-card product-small flex-justify-center">
+      <div class="product-info center1200">
+        {{#with card}}
+          <h4 class="product-title">{{title}}</h4>
+          <div class="product-description">{{descriptions}}</div>
+          {{#with link}}
+              <a href="{{link}}" class="product-link">{{text}}</a>
+          {{/with}}
         {{/with}}
-      {{/with}}
-    </div>
+      </div>
+    </section>
   </div>
 </main>
 <footer>
