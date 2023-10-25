@@ -85,7 +85,7 @@
       </div>
     </section>
     <section class="product-apple-wwwdc3 product-small flex-justify-center">
-      <div class="product-info center1200">
+      <div class="product-info text-bottom center1200">
         {{#with conference}}
           <h4 class="product-title">{{title}}</h4>
           <div class="product-description">{{descriptions}}</div>
@@ -145,6 +145,17 @@
     </section>
   </div>
 </main>
-<footer>
-
+<footer class="footer flex-justify-center">
+  <div class="footer-menu center1200">
+    {{#each footer}}
+    <div class="template-footerHeaders">
+      <div class="template-footerHeader">
+        {{title}}
+      </div>
+      <div class="template-footerLinksText">
+        {{> template-nav list=links isvertical=true }}
+      </div>
+    </div>
+    {{/each}} <!-- end of footer -->
+  </div>
 </footer>
