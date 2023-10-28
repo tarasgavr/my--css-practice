@@ -1,0 +1,30 @@
+@use '../../lib/service.scss' as s;
+
+* {
+margin: 0;
+padding: 0;
+}
+a {
+text-decoration: none;
+}
+.breadcrumb {
+  display: flex;
+  list-style-type: none;
+}
+.breadcrumb-item:last-child::before {
+  content: '--';
+  margin-left: s.space(1)
+}
+body {
+ font-family: 'Roboto', sans-serif;
+ background-color: s.color('background-white');
+ font-size: s.font();
+}
+.flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+.center1200 {
+  max-width: 75rem;
+  width: 100%;
+}

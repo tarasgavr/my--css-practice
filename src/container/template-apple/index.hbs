@@ -1,0 +1,161 @@
+<header>
+  <section class="headerdark flex-justify-center">
+    <div class="headerrow center1200">
+      {{#with header}}
+        <div class="headermenu">
+          <img src="/img/svg/apple-sign.svg" alt="Apple" class="header-icon">
+          {{#each links}}
+            <a href="{{url}}" class="header-link">{{text}}</a>
+          {{/each}}
+        </div>
+        <div class="header-signs">
+          <img src="/img/svg/apple-search.svg" alt="Search" class="header-icon search-icon">
+          <img src="/img/svg/apple-bag.svg" alt="Bag" class="header-icon">
+        </div>
+    </div>
+  </section>
+  <section class="headerlight flex-justify-center">
+    <div class="headerrow center1200">
+      {{#with ad}}
+        <div class="header-title">{{title}}</div>
+          {{#with link}}
+            <a href="{{url}}" class="header-blue-link">{{text}}</a>
+          {{/with}}
+      {{/with}}
+      {{/with}}
+    </div>
+  </section>
+</header>
+<main>
+  <section class="product-iphonepro product-big flex-justify-center">
+    <div class="product-info center1200">
+      {{#with iphone_pro}}
+        <h4 class="product-title">{{title}}</h4>
+        <div class="product-description">{{descriptions}}</div>
+        {{#with link}}
+          <div class="product-links">
+            {{#each text}}
+              <a href="{{../link}}" class="product-link">{{this}}</a>
+            {{/each}}
+          </div>
+        {{/with}}
+      {{/with}}
+    </div>
+  </section>
+  <section class="product-iphone product-big flex-justify-center">
+    <div class="product-info center1200">
+      {{#with iphone}}
+        <h4 class="product-title">{{title}}</h4>
+        <div class="product-description">{{descriptions}}</div>
+        {{#with link}}
+          <div class="product-links">
+            {{#each text}}
+              <a href="{{../link}}" class="product-link">{{this}}</a>
+            {{/each}}
+          </div>
+        {{/with}}
+      {{/with}}
+    </div>
+  </section>
+  <section class="product-apple-watch product-big flex-justify-center">
+    <div class="product-info center1200">
+      {{#with iwatch}}
+        <h4 class="product-title">{{title}}</h4>
+        <div class="product-description">{{descriptions}}</div>
+        {{#with link}}
+          <div class="product-links">
+            {{#each text}}
+              <a href="{{../link}}" class="product-link">{{this}}</a>
+            {{/each}}
+          </div>
+        {{/with}}
+      {{/with}}
+    </div>
+  </section>
+  <div class="apple-grid">
+    <section class="product-apple-compare product-small flex-justify-center">
+      <div class="product-info center1200">
+        {{#with trade_in}}
+          <h4 class="product-title">{{title}}</h4>
+          <div class="product-description">{{descriptions}}</div>
+          {{#with link}}
+            <a href="{{link}}" class="product-link">{{text}}</a>
+          {{/with}}
+        {{/with}}
+      </div>
+    </section>
+    <section class="product-apple-wwwdc3 product-small flex-justify-center">
+      <div class="product-info text-bottom center1200">
+        {{#with conference}}
+          <h4 class="product-title">{{title}}</h4>
+          <div class="product-description">{{descriptions}}</div>
+          {{#with link}}
+              <a href="{{link}}" class="product-link">{{text}}</a>
+          {{/with}}
+        {{/with}}
+      </div>
+    </section>
+    <section class="product-apple-macbook product-small flex-justify-center">
+      <div class="product-info center1200">
+        {{#with ipad}}
+          <h4 class="product-title">{{title}}</h4>
+          <div class="product-description">{{descriptions}}</div>
+          {{#with link}}
+            <div class="product-links">
+              {{#each text}}
+                <a href="{{../link}}" class="product-link">{{this}}</a>
+              {{/each}}
+            </div>
+          {{/with}}
+        {{/with}}
+      </div>
+    </section>
+    <section class="product-apple-meet product-small flex-justify-center">
+      <div class="product-info center1200">
+        {{#with small_business}}
+          <h4 class="product-title">{{title}}</h4>
+          <div class="product-description">{{descriptions}}</div>
+          {{#with link}}
+              <a href="{{link}}" class="product-link">{{text}}</a>
+          {{/with}}
+        {{/with}}
+      </div>
+    </section>
+    <section class="product-apple-airpods product-small flex-justify-center">
+      <div class="product-info center1200">
+        {{#with gift}}
+          <h4 class="product-title">{{title}}</h4>
+          <div class="product-description">{{descriptions}}</div>
+          {{#with link}}
+              <a href="{{link}}" class="product-link">{{text}}</a>
+          {{/with}}
+        {{/with}}
+      </div>
+    </section>
+    <section class="product-apple-card product-small flex-justify-center">
+      <div class="product-info center1200">
+        {{#with card}}
+          <h4 class="product-title">{{title}}</h4>
+          <div class="product-description">{{descriptions}}</div>
+          {{#with link}}
+              <a href="{{link}}" class="product-link">{{text}}</a>
+          {{/with}}
+        {{/with}}
+      </div>
+    </section>
+  </div>
+</main>
+<footer class="footer flex-justify-center">
+  <div class="footer-menu center1200">
+    {{#each footer}}
+    <div class="template-footerHeaders">
+      <div class="template-footerHeader">
+        {{title}}
+      </div>
+      <div class="template-footerLinksText">
+        {{> template-nav list=links isvertical=true }}
+      </div>
+    </div>
+    {{/each}} <!-- end of footer -->
+  </div>
+</footer>

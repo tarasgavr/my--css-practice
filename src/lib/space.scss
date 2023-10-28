@@ -1,0 +1,13 @@
+@use './var.scss';
+@function space($num) {
+  @return $num * 0.25rem;
+}
+@function size($num) {
+  @return $num * 0.125rem;
+}
+@function color($key) {
+  @return map-get(var.$colorMap,$key);
+}
+@function font($key: 'default') {
+  @return map-get(var.$fontSizeMap,$key);
+}

@@ -1,0 +1,144 @@
+@use '../../lib/service.scss' as s;
+
+.headerdark {
+  background-color: s.color('dark-gray');
+}
+.headerrow {
+  display: flex;
+  justify-content: space-between;
+}
+.headermenu {
+  display: flex;
+  align-items: center;
+}
+.header-icon {
+  width: s.size(7);
+  height: s.size(22);
+  @include s.click;
+}
+.header-link {
+  margin-left: s.space(7);
+  font-size: s.font('menu-text-sm');
+  color: s.color('dark-white');
+  @include s.click;
+}
+.header-signs {
+  display: flex;
+  gap: s.space(7);
+}
+.headerlight {
+  background-color: s.color('dark-white');
+  padding: s.space(3) 0;
+}
+.header-title {
+  font-size: s.font('menu-text');
+  color: s.color('dark-black');
+  line-height: 147.059%;
+}
+.header-blue-link::after, .product-link::after {
+  content: '>';
+  margin-left: s.space(2);
+}
+.header-blue-link {
+  font-size: s.font('menu-text');
+  color: s.color('dark-blue');
+  line-height: 147.059%;
+  @include s.click;
+}
+.apple-grid {
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(2,1fr);
+}
+@each $class, $url in s.$productImage {
+  .product-#{$class} {
+    background-image: url(#{$url});
+    background-size: cover;
+    background-position: bottom center;
+    height: 100vh;
+  }
+}
+.product-big {
+  max-height: 700px;
+  padding: s.space(20) 0;
+}
+.product-big:nth-child(odd) {
+  color: s.color('background-white');
+}
+.product-small {
+  max-height: 580px;
+  padding: s.space(12.5) 0;
+}
+.product-small:nth-child(even):not(:last-child) {
+  color: s.color('background-white');
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: s.space(5);
+}
+.text-bottom {
+  justify-content: flex-end;
+}
+.product-title {
+  font-size: s.font('card-title');  
+  text-align: center;
+}
+.product-description {
+  font-size: s.font('card-text');
+  text-align: center;
+}
+.apple-grid .product-title {
+  font-size: s.font('card-title-sm');  
+  text-align: center;
+}
+.apple-grid .product-description {
+  font-size: s.font('card-text-sm');
+  text-align: center;
+}
+.product-links {
+  display: flex;
+  gap: s.space(5);
+  justify-content: center;
+}
+.product-link {
+  font-size: s.font('menu-text');
+  color: s.color('light-blue');
+}
+.footer {
+  background-color: s.color('light-white');
+  padding: s.space(10) 0;
+}
+.footer-menu {
+  display: flex;
+  gap: s.space(5);
+}
+.template-footerHeaders {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  gap: s.space(4);
+}
+.template-footerLinks {
+  display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.template-footerHeader {
+  color: s.color('light-black');
+  font-size: s.font('menu-text-sm');
+	font-weight: 600;
+}
+.template-nav-item a {
+  color: s.color('light-gray');
+  font-size: s.font('menu-text-sm');
+  @include s.click;
+}
+.template-menu-down {
+  display: flex;
+	flex-direction: column;
+  gap: s.space(3);
+}

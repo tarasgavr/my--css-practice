@@ -1,0 +1,256 @@
+.headerdark {
+  background-color: rgb(69, 69, 69);
+}
+
+.headerrow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headermenu {
+  display: flex;
+  align-items: center;
+}
+
+.header-icon {
+  width: 0.875rem;
+  height: 2.75rem;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.header-icon:hover {
+  opacity: 0.7;
+}
+.header-icon:active {
+  opacity: 0.3;
+}
+
+.header-link {
+  margin-left: 1.75rem;
+  font-size: 0.75rem;
+  color: rgb(218, 218, 218);
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.header-link:hover {
+  opacity: 0.7;
+}
+.header-link:active {
+  opacity: 0.3;
+}
+
+.header-signs {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.headerlight {
+  background-color: rgb(218, 218, 218);
+  padding: 0.75rem 0;
+}
+
+.header-title {
+  font-size: 0.875rem;
+  color: rgb(0, 0, 0);
+  line-height: 147.059%;
+}
+
+.header-blue-link::after, .product-link::after {
+  content: ">";
+  margin-left: 0.5rem;
+}
+
+.header-blue-link {
+  font-size: 0.875rem;
+  color: rgb(0, 102, 204);
+  line-height: 147.059%;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.header-blue-link:hover {
+  opacity: 0.7;
+}
+.header-blue-link:active {
+  opacity: 0.3;
+}
+
+.apple-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.product-iphonepro {
+  background-image: url(/img/png/iphone14pro.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-iphone {
+  background-image: url(/img/png/iphone14.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-apple-watch {
+  background-image: url(/img/png/apple-watch.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-apple-compare {
+  background-image: url(/img/png/apple-compare.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-apple-wwwdc3 {
+  background-image: url(/img/png/apple-wwwdc3.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-apple-macbook {
+  background-image: url(/img/png/apple-macbook.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-apple-meet {
+  background-image: url(/img/png/apple-meet.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-apple-airpods {
+  background-image: url(/img/png/apple-airpods.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-apple-card {
+  background-image: url(/img/png/apple-card.png);
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+}
+
+.product-big {
+  max-height: 700px;
+  padding: 5rem 0;
+}
+
+.product-big:nth-child(odd) {
+  color: rgb(255, 255, 255);
+}
+
+.product-small {
+  max-height: 580px;
+  padding: 3.125rem 0;
+}
+
+.product-small:nth-child(even):not(:last-child) {
+  color: rgb(255, 255, 255);
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.text-bottom {
+  justify-content: flex-end;
+}
+
+.product-title {
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.product-description {
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.apple-grid .product-title {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.apple-grid .product-description {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.product-links {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.product-link {
+  font-size: 0.875rem;
+  color: rgb(41, 151, 255);
+}
+
+.footer {
+  background-color: rgb(245, 245, 247);
+  padding: 2.5rem 0;
+}
+
+.footer-menu {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.template-footerHeaders {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+.template-footerLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.template-footerHeader {
+  color: rgb(29, 29, 31);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.template-nav-item a {
+  color: rgb(66, 66, 69);
+  font-size: 0.75rem;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.template-nav-item a:hover {
+  opacity: 0.7;
+}
+.template-nav-item a:active {
+  opacity: 0.3;
+}
+
+.template-menu-down {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/*# sourceMappingURL=style.css.map */
